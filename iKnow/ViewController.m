@@ -35,20 +35,10 @@
     x = 0;
 }
 
-- (void)testblablabla
+-(void)downloadKennis
 {
-    int x, y;
-    x = 1;
+    // kennis hier delen
 }
 
--(void)eenEricIJzermethode
-{
-    NSLog(@"Hello World");
-}
-
--(void)johannenmarkster
-{
-    NSLog(@"gewichtig");
-}
 
 @end
