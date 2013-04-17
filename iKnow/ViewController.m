@@ -26,4 +26,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)openList:(id)sender {
+}
+
+- (IBAction)closeList:(id)sender {
+    //hier nog iets maken
+    int x;
+    x = 0;
+}
 @end

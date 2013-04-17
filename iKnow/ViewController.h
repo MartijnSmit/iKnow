@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *btn_1;
+@property (weak, nonatomic) IBOutlet UIButton *btn_2;
+- (IBAction)openList:(id)sender;
+- (IBAction)closeList:(id)sender;
 
 @end
