@@ -46,4 +46,9 @@
     NSLog(@"Hello World");
 }
 
+-(void)johannenmarkster
+{
+    NSLog(@"gewichtig");
+}
+
 @end
