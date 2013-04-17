@@ -40,4 +40,9 @@
     int x, y;
     x = 1;
 }
+
+-(void)push
+{
+    //haha
+}
 @end
