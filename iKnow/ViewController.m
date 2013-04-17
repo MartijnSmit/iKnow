@@ -34,4 +34,10 @@
     int x;
     x = 0;
 }
+
+- (void)testblablabla
+{
+    int x, y;
+    x = 1;
+}
 @end
