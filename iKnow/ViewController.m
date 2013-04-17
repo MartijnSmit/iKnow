@@ -41,4 +41,9 @@
     x = 1;
 }
 
+-(void)eenEricIJzermethode
+{
+    NSLog(@"Hello World");
+}
+
 @end
