@@ -41,8 +41,4 @@
     x = 1;
 }
 
--(void)push
-{
-    //haha
-}
 @end
