@@ -1,17 +1,23 @@
 //
 //  ViewController.h
-//  iKnow
+//  Extended Tableview Test
 //
-//  Created by Martijn Smit on 17-04-13.
-//  Copyright (c) 2013 WeMa IT. All rights reserved.
+//  Created by Mark ter Luun on 06-05-13.
+//  Copyright (c) 2013 Vestech. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "Table1DataSource.h"
+#import "Table2DataSource.h"
+#import "Table1Delegate.h"
+#import "Table2Delegate.h"
 
 @interface ViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIButton *btn_1;
-@property (weak, nonatomic) IBOutlet UIButton *btn_2;
-- (IBAction)openList:(id)sender;
-- (IBAction)closeList:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableView *Table1;
+@property (weak, nonatomic) IBOutlet UITableView *Table2;
 
+@property (nonatomic, retain) NSObject<UITableViewDataSource> *ds1;
+@property (nonatomic, retain) NSObject<UITableViewDataSource> *ds2;
+@property (nonatomic, retain) NSObject<UITableViewDelegate> *dg1;
+@property (nonatomic, retain) NSObject<UITableViewDelegate> *dg2;
 @end

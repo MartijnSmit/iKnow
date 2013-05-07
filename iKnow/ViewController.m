@@ -1,9 +1,9 @@
 //
 //  ViewController.m
-//  iKnow
+//  Extended Tableview Test
 //
-//  Created by Martijn Smit on 17-04-13.
-//  Copyright (c) 2013 WeMa IT. All rights reserved.
+//  Created by Mark ter Luun on 06-05-13.
+//  Copyright (c) 2013 Vestech. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -17,7 +17,26 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+
+    // Table1
+    [self setDs1:[[Table1DataSource alloc] initWithTestData]];
+    [self setDg1:[[Table1Delegate alloc] init]];
+    
+    [[self Table1] setDataSource:[self ds1]];
+    [[self Table1] setDelegate:[self dg1]];
+    
+    [[self Table1] reloadData];
+    
+    // Table2
+    [self setDs2:[[Table2DataSource alloc] init]];
+    [self setDg2:[[Table2Delegate alloc] init]];
+    
+    [[self Table2] setDataSource:[self ds2]];
+    [[self Table2] setDelegate:[self dg2]];
+    
+    [[self Table2] reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -25,20 +44,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (IBAction)openList:(id)sender {
-}
-
-- (IBAction)closeList:(id)sender {
-    //hier nog iets maken
-    int x;
-    x = 0;
-}
-
--(void)downloadKennis
-{
-    // kennis hier delen
-}
-
 
 @end

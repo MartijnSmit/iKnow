@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C10F33621739220B0080CFDC /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C10F33611739220B0080CFDC /* Twitter.framework */; };
 		C1C4660A171EB92C005B5660 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C46609171EB92C005B5660 /* UIKit.framework */; };
 		C1C4660C171EB92C005B5660 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C4660B171EB92C005B5660 /* Foundation.framework */; };
 		C1C4660E171EB92C005B5660 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C4660D171EB92C005B5660 /* CoreGraphics.framework */; };
@@ -18,9 +19,16 @@
 		C1C46620171EB92C005B5660 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1C4661F171EB92C005B5660 /* Default-568h@2x.png */; };
 		C1C46623171EB92C005B5660 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1C46621171EB92C005B5660 /* MainStoryboard.storyboard */; };
 		C1C46626171EB92C005B5660 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C46625171EB92C005B5660 /* ViewController.m */; };
+		C1FCB07A1737D75F00914F5D /* TwitterItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1FCB0771737D75F00914F5D /* TwitterItemViewController.m */; };
+		C1FCB07B1737D75F00914F5D /* TwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1FCB0791737D75F00914F5D /* TwitterViewController.m */; };
+		C1FCB0841737D8D100914F5D /* Table1DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C1FCB07D1737D8D100914F5D /* Table1DataSource.m */; };
+		C1FCB0851737D8D100914F5D /* Table1Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1FCB07F1737D8D100914F5D /* Table1Delegate.m */; };
+		C1FCB0861737D8D100914F5D /* Table2DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C1FCB0811737D8D100914F5D /* Table2DataSource.m */; };
+		C1FCB0871737D8D100914F5D /* Table2Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1FCB0831737D8D100914F5D /* Table2Delegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C10F33611739220B0080CFDC /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		C1C46606171EB92C005B5660 /* iKnow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iKnow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C46609171EB92C005B5660 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C1C4660B171EB92C005B5660 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +45,18 @@
 		C1C46622171EB92C005B5660 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C1C46624171EB92C005B5660 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C1C46625171EB92C005B5660 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C1FCB0761737D75F00914F5D /* TwitterItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterItemViewController.h; sourceTree = "<group>"; };
+		C1FCB0771737D75F00914F5D /* TwitterItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterItemViewController.m; sourceTree = "<group>"; };
+		C1FCB0781737D75F00914F5D /* TwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterViewController.h; sourceTree = "<group>"; };
+		C1FCB0791737D75F00914F5D /* TwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterViewController.m; sourceTree = "<group>"; };
+		C1FCB07C1737D8D100914F5D /* Table1DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Table1DataSource.h; sourceTree = "<group>"; };
+		C1FCB07D1737D8D100914F5D /* Table1DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Table1DataSource.m; sourceTree = "<group>"; };
+		C1FCB07E1737D8D100914F5D /* Table1Delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Table1Delegate.h; sourceTree = "<group>"; };
+		C1FCB07F1737D8D100914F5D /* Table1Delegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Table1Delegate.m; sourceTree = "<group>"; };
+		C1FCB0801737D8D100914F5D /* Table2DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Table2DataSource.h; sourceTree = "<group>"; };
+		C1FCB0811737D8D100914F5D /* Table2DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Table2DataSource.m; sourceTree = "<group>"; };
+		C1FCB0821737D8D100914F5D /* Table2Delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Table2Delegate.h; sourceTree = "<group>"; };
+		C1FCB0831737D8D100914F5D /* Table2Delegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Table2Delegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C10F33621739220B0080CFDC /* Twitter.framework in Frameworks */,
 				C1C4660A171EB92C005B5660 /* UIKit.framework in Frameworks */,
 				C1C4660C171EB92C005B5660 /* Foundation.framework in Frameworks */,
 				C1C4660E171EB92C005B5660 /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +94,7 @@
 		C1C46608171EB92C005B5660 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C10F33611739220B0080CFDC /* Twitter.framework */,
 				C1C46609171EB92C005B5660 /* UIKit.framework */,
 				C1C4660B171EB92C005B5660 /* Foundation.framework */,
 				C1C4660D171EB92C005B5660 /* CoreGraphics.framework */,
@@ -83,6 +105,12 @@
 		C1C4660F171EB92C005B5660 /* iKnow */ = {
 			isa = PBXGroup;
 			children = (
+				C1FCB0881737D8E700914F5D /* Table1 */,
+				C1FCB0891737D91D00914F5D /* Table2 */,
+				C1FCB0761737D75F00914F5D /* TwitterItemViewController.h */,
+				C1FCB0771737D75F00914F5D /* TwitterItemViewController.m */,
+				C1FCB0781737D75F00914F5D /* TwitterViewController.h */,
+				C1FCB0791737D75F00914F5D /* TwitterViewController.m */,
 				C1C46618171EB92C005B5660 /* AppDelegate.h */,
 				C1C46619171EB92C005B5660 /* AppDelegate.m */,
 				C1C46621171EB92C005B5660 /* MainStoryboard.storyboard */,
@@ -105,6 +133,28 @@
 				C1C4661F171EB92C005B5660 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C1FCB0881737D8E700914F5D /* Table1 */ = {
+			isa = PBXGroup;
+			children = (
+				C1FCB07C1737D8D100914F5D /* Table1DataSource.h */,
+				C1FCB07D1737D8D100914F5D /* Table1DataSource.m */,
+				C1FCB07E1737D8D100914F5D /* Table1Delegate.h */,
+				C1FCB07F1737D8D100914F5D /* Table1Delegate.m */,
+			);
+			name = Table1;
+			sourceTree = "<group>";
+		};
+		C1FCB0891737D91D00914F5D /* Table2 */ = {
+			isa = PBXGroup;
+			children = (
+				C1FCB0801737D8D100914F5D /* Table2DataSource.h */,
+				C1FCB0811737D8D100914F5D /* Table2DataSource.m */,
+				C1FCB0821737D8D100914F5D /* Table2Delegate.h */,
+				C1FCB0831737D8D100914F5D /* Table2Delegate.m */,
+			);
+			name = Table2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +226,12 @@
 				C1C46616171EB92C005B5660 /* main.m in Sources */,
 				C1C4661A171EB92C005B5660 /* AppDelegate.m in Sources */,
 				C1C46626171EB92C005B5660 /* ViewController.m in Sources */,
+				C1FCB07A1737D75F00914F5D /* TwitterItemViewController.m in Sources */,
+				C1FCB07B1737D75F00914F5D /* TwitterViewController.m in Sources */,
+				C1FCB0841737D8D100914F5D /* Table1DataSource.m in Sources */,
+				C1FCB0851737D8D100914F5D /* Table1Delegate.m in Sources */,
+				C1FCB0861737D8D100914F5D /* Table2DataSource.m in Sources */,
+				C1FCB0871737D8D100914F5D /* Table2Delegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +356,7 @@
 				C1C4662B171EB92C005B5660 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
