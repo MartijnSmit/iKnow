@@ -8,7 +8,13 @@
 
 #import "Table2DataSource.h"
 
+#define FONT_SIZE 14.0f
+#define CELL_CONTENT_WIDTH 320.0f
+#define CELL_CONTENT_MARGIN 10.0f
+#define FIXED_HEIGHT_SECTION 80.0F
+
 @implementation Table2DataSource
+int numberOfTextRows;
 
 - (id)init
 {
@@ -16,6 +22,18 @@
     //[self setItems:[[NSArray alloc] initWithObjects:@"Table 2 item 1", @"Table 2 item 2", @"Table 2 item 3", @"Table 2 item 4", @"Table 2 item 5", nil]];
     
     [self fetchTweets];
+    
+    
+    // Pull to Refresh
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    //set the title for pull request
+    refreshControl.attributedTitle = [[NSAttributedString alloc]initWithString:@"pull to Refresh"];
+    //call he refresh function
+    [refreshControl addTarget:self action:@selector(refreshMyTableView)
+             forControlEvents:UIControlEventValueChanged];
+    refreshControl = refreshControl;
+    
+    [self refreshControl];
     
     // Initialize the super class
     return [super init];
@@ -74,18 +92,20 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"%d", [[self items] count]);
+    //NSLog(@"%d", [[self items] count]);
     return [[self items] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     //UITableViewCell *tweetcell = [tableView dequeueReusableCellWithIdentifier:@"TweetCell"];
     
     static NSString *CellIdentifier = @"TweetCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    //cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+    //cell.textLabel.numberOfLines = self.numberOfTextRows;
 	
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
@@ -145,8 +165,62 @@
         });
         
     });
-    //
-    return cell;
-
+    return cell; 
 }
+
+/*- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    NSDictionary *tweet = [_items objectAtIndex:indexPath.row];
+    
+    // Display the tweets & tweetauthor
+	NSString *tweets = [tweet objectForKey:@"text"];
+	NSString *tweetauthor = [tweet objectForKey:@"from_user"];
+	NSString *display = [NSString stringWithFormat:@"%@\n\n%@", tweets, tweetauthor];
+    
+   // NSString *text =
+    //NSString *text = [_items objectAtIndex:[indexPath row]];
+    
+    CGSize constraint = CGSizeMake(CELL_CONTENT_WIDTH - (CELL_CONTENT_MARGIN * 2), 20000.0f);
+    
+    CGSize size = [display sizeWithFont:[UIFont systemFontOfSize:FONT_SIZE] constrainedToSize:constraint lineBreakMode:UILineBreakModeWordWrap];
+    
+    CGFloat height = MAX(size.height, 44.0f);
+    
+    NSLog(@"Height? %f", height);
+    
+    return height + (CELL_CONTENT_MARGIN * 2);
+}*/
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    /*CGSize theSize = [theObject.theStringToDisplay sizeWithFont:[UIFont systemFontOfSize:18.0f] constrainedToSize:CGSizeMake(265.0f, 9999.0f) lineBreakMode:UILineBreakModeWordWrap];
+    // This gets the size of the rectangle needed to draw a multi-line string
+    self.numberOfTextRows = round(theSize.height / 18);
+    // 18 is the size of the font used in the text label
+    // This will give us the number of lines in the multi-line string
+    
+    if ((indexPath.section == FIXED_HEIGHT_SECTION) || (self.numberOfTextRows < 2)) {
+        return 44;
+        // 44 is the default row height; use it for empty or one-line cells (or in other table sections)
+    } else {
+        return theSize.height + 16;
+        // 16 seems to provide a decent space above/below; tweak to taste
+    }*/
+}
+
+-(void)refreshTableView{
+    
+    //set the title while refreshing
+    _refreshControl.attributedTitle = [[NSAttributedString alloc]initWithString:@"Refreshing the TableView"];
+    //set the date and time of refreshing
+    NSDateFormatter *formattedDate = [[NSDateFormatter alloc]init];
+    [formattedDate setDateFormat:@"MMM d, h:mm a"];
+    NSString *lastupdated = [NSString stringWithFormat:@"Last Updated on %@",[formattedDate stringFromDate:[NSDate date]]];
+    _refreshControl.attributedTitle = [[NSAttributedString alloc]initWithString:lastupdated];
+    //end the refreshing
+    [_refreshControl endRefreshing];
+    
+}
+
 @end

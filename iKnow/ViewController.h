@@ -20,4 +20,5 @@
 @property (nonatomic, retain) NSObject<UITableViewDataSource> *ds2;
 @property (nonatomic, retain) NSObject<UITableViewDelegate> *dg1;
 @property (nonatomic, retain) NSObject<UITableViewDelegate> *dg2;
+
 @end

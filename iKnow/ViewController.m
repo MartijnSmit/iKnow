@@ -18,8 +18,7 @@
 {
     [super viewDidLoad];
     
-    
-
+    // Set tables
     // Table1
     [self setDs1:[[Table1DataSource alloc] initWithTestData]];
     [self setDg1:[[Table1Delegate alloc] init]];
@@ -35,7 +34,7 @@
     
     [[self Table2] setDataSource:[self ds2]];
     [[self Table2] setDelegate:[self dg2]];
-    
+
     [[self Table2] reloadData];
 }
 

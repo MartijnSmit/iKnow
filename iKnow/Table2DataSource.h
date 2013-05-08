@@ -10,7 +10,10 @@
 
 @interface Table2DataSource : NSObject <UITableViewDataSource>
 @property (nonatomic, strong) NSArray *items;
+@property (nonatomic, retain) UIRefreshControl *refreshControl;
 
 - (id)init;
 - (void)fetchTweets;
+- (void)refreshTableView;
+
 @end
