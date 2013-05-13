@@ -192,21 +192,31 @@ int numberOfTextRows;
 }*/
 
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    /*CGSize theSize = [theObject.theStringToDisplay sizeWithFont:[UIFont systemFontOfSize:18.0f] constrainedToSize:CGSizeMake(265.0f, 9999.0f) lineBreakMode:UILineBreakModeWordWrap];
-    // This gets the size of the rectangle needed to draw a multi-line string
-    self.numberOfTextRows = round(theSize.height / 18);
-    // 18 is the size of the font used in the text label
-    // This will give us the number of lines in the multi-line string
-    
-    if ((indexPath.section == FIXED_HEIGHT_SECTION) || (self.numberOfTextRows < 2)) {
-        return 44;
-        // 44 is the default row height; use it for empty or one-line cells (or in other table sections)
-    } else {
-        return theSize.height + 16;
-        // 16 seems to provide a decent space above/below; tweak to taste
-    }*/
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row <[_items count])
+    {
+        CGFloat     result = 44.0f;
+        NSString*   text = nil;
+        CGFloat     width =220 ;
+        
+        if (text)
+        {
+            
+            CGSize      textSize = { width, 20000.0f };     // width and height of text area
+            CGSize      size = [text sizeWithFont:[UIFont boldSystemFontOfSize:15] constrainedToSize:textSize lineBreakMode:UILineBreakModeWordWrap];
+            
+            size.height += 90.0f;           // top and bottom margin
+            result = MAX(size.height, result)  ;    // at least one row
+        }
+        
+        return result;
+        
+    }
+    else
+    {
+        return 230.0;
+    }
 }
 
 -(void)refreshTableView{
