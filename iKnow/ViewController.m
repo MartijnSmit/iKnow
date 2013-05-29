@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "UIViewController+RNSwipeViewController.h"
+#import "RNSwipeViewController.h"
 
 @interface ViewController ()
 
@@ -44,4 +46,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)openSearch:(id)sender {
+    if (! self.swipeController) {
+        NSLog(@"swipe controller not found");
+    }
+    [self.swipeController showLeft];
+}
+
+- (IBAction)openLogin:(id)sender {
+}
 @end

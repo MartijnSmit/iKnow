@@ -31,6 +31,11 @@
     [[prototype textLabel] setText:(NSString *)[[self items] objectAtIndex:[indexPath row]]];
     [[prototype detailTextLabel] setText:@"Detail"];
     
+    // Tableview background
+    [tableView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"skill_bg.png"]]];
+    UIColor *color = [UIColor colorWithPatternImage:[UIImage imageNamed:@"skill_seperator.png"]];
+    [tableView setSeparatorColor:color];
+    
     return prototype;
 }
 @end

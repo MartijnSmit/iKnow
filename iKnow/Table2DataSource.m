@@ -8,10 +8,6 @@
 
 #import "Table2DataSource.h"
 
-#define FONT_SIZE 14.0f
-#define CELL_CONTENT_WIDTH 320.0f
-#define CELL_CONTENT_MARGIN 10.0f
-#define FIXED_HEIGHT_SECTION 80.0F
 
 @implementation Table2DataSource
 int numberOfTextRows;
@@ -111,6 +107,20 @@ int numberOfTextRows;
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    NSInteger mod = [indexPath row] % 2;
+    if (mod == 1) {
+        [cell.contentView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"twitterbg1.png"]]];
+        
+    }else{
+        [cell.contentView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"twitterbg2.png"]]];
+    }
+    
+    // Tableview background
+    [tableView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"twitter_bg.png"]]];
+    // Seperator
+    UIColor *color = [UIColor colorWithPatternImage:[UIImage imageNamed:@"twitter_seperator.png"]];
+    [tableView setSeparatorColor:color];
+    
     // Set labels with twitter items
     NSDictionary *tweet = [_items objectAtIndex:indexPath.row];
     
@@ -122,7 +132,7 @@ int numberOfTextRows;
     
     UIImageView *thumb = (UIImageView *)[cell viewWithTag:3];
     [thumb setClipsToBounds:YES];
-    [thumb setFrame:CGRectMake(0.0,0.0,80.0,80.0)];
+    [thumb setFrame:CGRectMake(10.0,20.0,100.0,100.0)];
     thumb.contentMode = UIViewContentModeScaleAspectFill;
     
     thumb.image = nil;
@@ -232,5 +242,15 @@ int numberOfTextRows;
     [_refreshControl endRefreshing];
     
 }
+
+/*- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath
+{
+    if((indexPath.row)==0)
+        cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage            imageNamed:@"twitter_bg.png"]]; //set image for cell 0
+    if (indexPath.row==1)
+        cell.backgroundColor = [UIColor colorWithRed:.8 green:.6 blue:.6 alpha:1]; //set color for cell 1
+    
+    tableView.backgroundColor = [UIColor colorWithPatternImage: [UIImage imageNamed: @"twitter_bg.png"]]; //set image for UITableView
+}*/
 
 @end

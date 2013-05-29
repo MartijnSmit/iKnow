@@ -21,4 +21,6 @@
 @property (nonatomic, retain) NSObject<UITableViewDelegate> *dg1;
 @property (nonatomic, retain) NSObject<UITableViewDelegate> *dg2;
 
+- (IBAction)openSearch:(id)sender;
+- (IBAction)openLogin:(id)sender;
 @end
