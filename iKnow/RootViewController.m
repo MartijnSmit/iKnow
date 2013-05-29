@@ -30,14 +30,12 @@
 	// Do any additional setup after loading the view.
     
     self.centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"centerViewController"];
-    self.leftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"leftViewController"];
+    //self.leftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"leftViewController"];
     self.rightViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"rightViewController"];
-    self.bottomViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"bottomViewController"];
+    //self.bottomViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"bottomViewController"];
     
     if (IS_IPAD) {
-        self.leftVisibleWidth = 300;
         self.rightVisibleWidth = 768;
-        self.bottomVisibleHeight = 1024;
     }
     
     self.swipeDelegate = self;

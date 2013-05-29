@@ -63,6 +63,7 @@
 		C177374417561D460030EAE8 /* searchresults_star.png in Resources */ = {isa = PBXBuildFile; fileRef = C177373B17561D460030EAE8 /* searchresults_star.png */; };
 		C177374517561D460030EAE8 /* twitterbg1.png in Resources */ = {isa = PBXBuildFile; fileRef = C177373C17561D460030EAE8 /* twitterbg1.png */; };
 		C177374717561E290030EAE8 /* twitterbg2.png in Resources */ = {isa = PBXBuildFile; fileRef = C177374617561E290030EAE8 /* twitterbg2.png */; };
+		C177374E17562ABA0030EAE8 /* SearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C177374D17562ABA0030EAE8 /* SearchResultsViewController.m */; };
 		C1C4660A171EB92C005B5660 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C46609171EB92C005B5660 /* UIKit.framework */; };
 		C1C4660C171EB92C005B5660 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C4660B171EB92C005B5660 /* Foundation.framework */; };
 		C1C4660E171EB92C005B5660 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C4660D171EB92C005B5660 /* CoreGraphics.framework */; };
@@ -152,6 +153,8 @@
 		C177373B17561D460030EAE8 /* searchresults_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchresults_star.png; sourceTree = "<group>"; };
 		C177373C17561D460030EAE8 /* twitterbg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterbg1.png; sourceTree = "<group>"; };
 		C177374617561E290030EAE8 /* twitterbg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterbg2.png; sourceTree = "<group>"; };
+		C177374C17562ABA0030EAE8 /* SearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsViewController.h; sourceTree = "<group>"; };
+		C177374D17562ABA0030EAE8 /* SearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsViewController.m; sourceTree = "<group>"; };
 		C1C46606171EB92C005B5660 /* iKnow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iKnow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C46609171EB92C005B5660 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C1C4660B171EB92C005B5660 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -319,6 +322,15 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
+		C1773748175629D80030EAE8 /* Search Results */ = {
+			isa = PBXGroup;
+			children = (
+				C177374C17562ABA0030EAE8 /* SearchResultsViewController.h */,
+				C177374D17562ABA0030EAE8 /* SearchResultsViewController.m */,
+			);
+			name = "Search Results";
+			sourceTree = "<group>";
+		};
 		C1C465FD171EB92C005B5660 = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +362,7 @@
 		C1C4660F171EB92C005B5660 /* iKnow */ = {
 			isa = PBXGroup;
 			children = (
+				C1773748175629D80030EAE8 /* Search Results */,
 				C1690FB3174E4F8D0084CBCD /* Storyboard */,
 				C1690FA1174E4E290084CBCD /* LeftView */,
 				C1690FA2174E4E460084CBCD /* RightView */,
@@ -552,6 +565,7 @@
 				C1690FC1174E52310084CBCD /* UIView+Sizes.m in Sources */,
 				C169100E174E57390084CBCD /* LoginViewController.m in Sources */,
 				C1D4C6D41754D461002712D8 /* BottomViewController.m in Sources */,
+				C177374E17562ABA0030EAE8 /* SearchResultsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
