@@ -7,7 +7,6 @@
         <!--Search Results View Controller-->
         <scene sceneID="kle-Pn-q6C">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AEu-fC-qs6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="X7Z-Qv-l0X" customClass="SearchResultsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VJy-qM-bUE">
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
@@ -51,13 +50,17 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="xLn-Cb-Jo0" kind="push" id="rw4-G1-4a8"/>
+                                    <action selector="goProfile:" destination="X7Z-Qv-l0X" eventType="touchUpInside" id="t06-gX-67l"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="xLn-Cb-Jo0" kind="push" identifier="pushProfile" id="fIN-bv-rnr"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AEu-fC-qs6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1981" y="-1555"/>
         </scene>
@@ -525,6 +528,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchResultsViewController.h"/>
             <relationships>
                 <relationship kind="action" name="goBack:"/>
+                <relationship kind="action" name="goProfile:"/>
             </relationships>
         </class>
         <class className="ViewController" superclassName="UIViewController">

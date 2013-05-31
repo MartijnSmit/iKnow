@@ -39,4 +39,8 @@
     
     [self dismissModalViewControllerAnimated:YES];
 }
+
+- (IBAction)goProfile:(id)sender {
+            [self performSegueWithIdentifier:@"pushProfile" sender:self];
+}
 @end
