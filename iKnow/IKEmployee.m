@@ -68,4 +68,9 @@
     return NO;
 }
 
++ (BOOL)login:(NSString *)email password:(NSString *)password
+{
+    // Send the request
+}
+
 @end

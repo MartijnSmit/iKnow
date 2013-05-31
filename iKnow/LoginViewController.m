@@ -7,8 +7,6 @@
 //
 
 #import "LoginViewController.h"
-#import "UIViewController+RNSwipeViewController.h"
-#import "RNSwipeViewController.h"
 
 @implementation LoginViewController
 
@@ -64,7 +62,7 @@
 
 - (void)loggedIn:(id)sender
 {
-    NSLog(@"Logged in");
+    //NSLog(@"Logged in");
 }
 
 /*-(void)viewWillAppear:(BOOL)animated
@@ -74,7 +72,7 @@
 
 - (void)checkLogin
 {
-    
+    [IKEmployee login:@"" password:@""];
 }
 
 /*- (void)getUserLogin

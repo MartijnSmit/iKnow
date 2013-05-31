@@ -18,6 +18,7 @@
 @property (nonatomic, strong, readonly) NSArray *skills;
 
 + (NSArray*)employeesFromService;
++ (BOOL)login:(NSString*)email password:(NSString*)password;
 
 - (id)initWithValuesFromDictionary:(NSDictionary*)dictionary;
 - (BOOL)login:(NSString*)password;

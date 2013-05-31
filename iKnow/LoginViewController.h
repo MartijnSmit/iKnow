@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIViewController+RNSwipeViewController.h"
+#import "RNSwipeViewController.h"
+#import "IKEmployee.h"
 
 @interface LoginViewController : UIViewController
 
