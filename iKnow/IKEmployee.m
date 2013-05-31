@@ -27,6 +27,7 @@
     _photo = [UIImage imageWithData:photoData];
     
     // Skills
+    // nog te implemeteren
     
     // Return the object
     return [self init];
