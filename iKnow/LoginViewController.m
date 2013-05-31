@@ -29,6 +29,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    //[self getUserLogin];
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,4 +75,31 @@
 {
         [self.view.superview setBounds:CGRectMake(0, 0, 450, 480)];
 }*/
+
+- (void)checkLogin
+{
+    
+}
+
+/*- (void)getUserLogin
+{
+    NSError *error;
+    NSData *loginData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://92.70.42.51:8000/IknowService.svc//login?email=jeroen.pijpker@stenden.com&password=test123"]];
+    NSDictionary *loginItems;
+    loginItems = [NSJSONSerialization JSONObjectWithData:loginData
+                                            options:kNilOptions
+                                                   error:&error];
+    NSLog(@"data? %@", loginItems);
+    
+    for(NSDictionary *data in loginItems)
+    {
+        // Key is het object
+        if (data)
+        {
+            NSString *key = [data objectForKey:@"key"];
+            NSLog(@"key is?: %@", key);
+        }
+    }
+}*/
+
 @end

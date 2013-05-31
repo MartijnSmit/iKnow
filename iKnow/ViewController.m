@@ -47,10 +47,11 @@
 }
 
 - (IBAction)openSearch:(id)sender {
-    if (! self.swipeController) {
+    [self performSegueWithIdentifier:@"pushSearchResults" sender:self];
+    /*if (! self.swipeController) {
         NSLog(@"swipe controller not found");
     }
-    [self.swipeController showLeft];
+    [self.swipeController showLeft];*/
 }
 
 - (IBAction)openLogin:(id)sender {

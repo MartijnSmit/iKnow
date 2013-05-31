@@ -10,6 +10,5 @@
 
 @interface LoginViewController : UIViewController
 
-- (IBAction)cancelLogin:(id)sender;
 - (IBAction)loggedIn:(id)sender;
 @end
