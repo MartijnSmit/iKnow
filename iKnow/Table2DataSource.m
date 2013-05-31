@@ -214,7 +214,7 @@ int numberOfTextRows;
         {
             
             CGSize      textSize = { width, 20000.0f };     // width and height of text area
-            CGSize      size = [text sizeWithFont:[UIFont boldSystemFontOfSize:15] constrainedToSize:textSize lineBreakMode:UILineBreakModeWordWrap];
+            CGSize      size = [text sizeWithFont:[UIFont boldSystemFontOfSize:15] constrainedToSize:textSize lineBreakMode:NSLineBreakByWordWrapping];
             
             size.height += 90.0f;           // top and bottom margin
             result = MAX(size.height, result)  ;    // at least one row

@@ -10,10 +10,6 @@
 #import "UIViewController+RNSwipeViewController.h"
 #import "RNSwipeViewController.h"
 
-@interface LoginViewController ()
-
-@end
-
 @implementation LoginViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -38,11 +34,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)cancelLogin:(id)sender {
-    
-    [self dismissModalViewControllerAnimated:YES];
-}
-
 - (void)handleTapBehind:(UITapGestureRecognizer *)sender
 {
     if (sender.state == UIGestureRecognizerStateEnded)
@@ -55,7 +46,7 @@
         {
             // Remove the recognizer first so it's view.window is valid.
             [self.view.window removeGestureRecognizer:sender];
-            [self dismissModalViewControllerAnimated:YES];
+            [self dismissViewControllerAnimated:YES completion:nil];
         }
     }
 }
@@ -69,6 +60,11 @@
     recognizer.cancelsTouchesInView = NO; //So the user can still interact with controls in the modal view
     [self.view.window addGestureRecognizer:recognizer];
     
+}
+
+- (void)loggedIn:(id)sender
+{
+    NSLog(@"Logged in");
 }
 
 /*-(void)viewWillAppear:(BOOL)animated
