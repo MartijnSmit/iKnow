@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "ProfileViewController.h"
 
 @implementation LoginViewController
 
@@ -69,13 +70,33 @@
 
 - (IBAction)login:(id)sender
 {
-    [IKEmployee login:_username.text password:_password.text];
+    if ([IKEmployee login:_username.text password:_password.text]) {
+        IKEmployee *employee = [[AppDelegate sharedAppDelegate] sessionEmployee];
+        
+        /*UIAlertView *LoginSucces = [[UIAlertView alloc]initWithTitle:@"Welcome in iKnow" message:@"Logged in BITCH!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [LoginSucces show];*/
+        //ProfileViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"rightViewController"];
+        //[self presentModalViewController:view animated:YES];
+        [self dismissViewControllerAnimated:YES completion:nil];
+         NSLog(@"Welcome, %@ %@", [employee firstName], [employee lastName]);
+    }
+    else {
+        UIAlertView *LoginFailed = [[UIAlertView alloc]initWithTitle:@"Login failed" message:@"Please try again Username or Password were wrong" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [LoginFailed show];
+        NSLog(@"Fail");
+    }
     
+    /*if ([[AppDelegate sharedAppDelegate] sessionEmployee] != nil) {
+        
+    }
+    else{
+        
+    }*/
 }
 
 - (void)sendtoProfile
 {
-    [self performSegueWithIdentifier:@"gotoProfile" sender:self];
+    [self performSegueWithIdentifier:@"pushProfile" sender:self];
 }
 
 /*- (void)getUserLogin

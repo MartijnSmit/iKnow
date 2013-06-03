@@ -20,7 +20,9 @@
 @property (nonatomic, retain) NSObject<UITableViewDataSource> *ds2;
 @property (nonatomic, retain) NSObject<UITableViewDelegate> *dg1;
 @property (nonatomic, retain) NSObject<UITableViewDelegate> *dg2;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *rightBarButton;
 
 - (IBAction)openSearch:(id)sender;
 - (IBAction)openLogin:(id)sender;
+- (IBAction)testRightitemBG:(id)sender;
 @end

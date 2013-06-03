@@ -13,6 +13,8 @@
 		C10F33621739220B0080CFDC /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C10F33611739220B0080CFDC /* Twitter.framework */; };
 		C1117F8B175C9F92003329D3 /* Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = C1117F88175C9F92003329D3 /* Encryption.m */; };
 		C1117F8C175C9F92003329D3 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C1117F8A175C9F92003329D3 /* NSData+Base64.m */; };
+		C1117F93175CC29E003329D3 /* profile_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C1117F91175CC29E003329D3 /* profile_icon.png */; };
+		C1117F94175CC29E003329D3 /* profile_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1117F92175CC29E003329D3 /* profile_icon@2x.png */; };
 		C1690FA5174E4EA20084CBCD /* RNSwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1690FA4174E4EA20084CBCD /* RNSwipeViewController.m */; };
 		C1690FAC174E4F090084CBCD /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1690FAB174E4F090084CBCD /* LeftViewController.m */; };
 		C1690FAF174E4F1E0084CBCD /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1690FAE174E4F1E0084CBCD /* RightViewController.m */; };
@@ -102,6 +104,8 @@
 		C1117F88175C9F92003329D3 /* Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Encryption.m; sourceTree = "<group>"; };
 		C1117F89175C9F92003329D3 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		C1117F8A175C9F92003329D3 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		C1117F91175CC29E003329D3 /* profile_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profile_icon.png; path = iKnow/profile_icon.png; sourceTree = "<group>"; };
+		C1117F92175CC29E003329D3 /* profile_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "profile_icon@2x.png"; path = "iKnow/profile_icon@2x.png"; sourceTree = "<group>"; };
 		C1690FA3174E4EA20084CBCD /* RNSwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSwipeViewController.h; sourceTree = "<group>"; };
 		C1690FA4174E4EA20084CBCD /* RNSwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSwipeViewController.m; sourceTree = "<group>"; };
 		C1690FAA174E4F090084CBCD /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
@@ -396,6 +400,8 @@
 		C1C465FD171EB92C005B5660 = {
 			isa = PBXGroup;
 			children = (
+				C1117F91175CC29E003329D3 /* profile_icon.png */,
+				C1117F92175CC29E003329D3 /* profile_icon@2x.png */,
 				C1C4660F171EB92C005B5660 /* iKnow */,
 				C1C46608171EB92C005B5660 /* Frameworks */,
 				C1C46607171EB92C005B5660 /* Products */,
@@ -603,6 +609,8 @@
 				C177374417561D460030EAE8 /* searchresults_star.png in Resources */,
 				C177374517561D460030EAE8 /* twitterbg1.png in Resources */,
 				C177374717561E290030EAE8 /* twitterbg2.png in Resources */,
+				C1117F93175CC29E003329D3 /* profile_icon.png in Resources */,
+				C1117F94175CC29E003329D3 /* profile_icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
