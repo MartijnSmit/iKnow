@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="vtR-Yi-VQZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="EPD-lD-KKi">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -109,7 +109,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="loggedIn:" destination="Ke9-nt-hXR" eventType="touchUpInside" id="s2Z-pd-Ugm"/>
+                                    <action selector="login:" destination="Ke9-nt-hXR" eventType="touchUpInside" id="npP-d7-GJ8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OsB-eu-1ui">
@@ -123,11 +123,23 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="recoveryPassword:" destination="Ke9-nt-hXR" eventType="touchUpInside" id="CeV-fw-nGD"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="xa4-6A-u73">
+                                <rect key="frame" x="268" y="180" width="190" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <value key="contentSizeForViewInPopover" type="size" width="540" height="620"/>
+                    <connections>
+                        <outlet property="password" destination="eEK-ZK-Xx6" id="kDo-nP-ueH"/>
+                        <outlet property="username" destination="xa4-6A-u73" id="zf6-Gd-4jK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Syb-C3-xye" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="RTb-76-fxC"/>
@@ -477,45 +489,6 @@
         <image name="twitter_ava.png" width="243" height="235"/>
         <image name="twitter_header.png" width="870" height="135"/>
     </resources>
-    <classes>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="loggedIn:"/>
-            </relationships>
-        </class>
-        <class className="RNSwipeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RNSwipeViewController.h"/>
-        </class>
-        <class className="RightViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RightViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="goBack:"/>
-            </relationships>
-        </class>
-        <class className="RootViewController" superclassName="RNSwipeViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RootViewController.h"/>
-        </class>
-        <class className="SearchResultsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchResultsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="goBack:"/>
-                <relationship kind="action" name="goProfile:"/>
-            </relationships>
-        </class>
-        <class className="TestViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TestViewController.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="openLogin:"/>
-                <relationship kind="action" name="openSearch:"/>
-                <relationship kind="outlet" name="Table1" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="Table2" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -60,19 +60,22 @@
     
 }
 
-- (void)loggedIn:(id)sender
+
+- (IBAction)recoveryPassword:(id)sender
 {
-    //NSLog(@"Logged in");
+    UIAlertView *recovererror = [[UIAlertView alloc]initWithTitle:@"Recover your Password" message:@"You have lost your Password?" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Cancel", nil];
+    [recovererror show];
 }
 
-/*-(void)viewWillAppear:(BOOL)animated
+- (IBAction)login:(id)sender
 {
-        [self.view.superview setBounds:CGRectMake(0, 0, 450, 480)];
-}*/
+    [IKEmployee login:_username.text password:_password.text];
+    
+}
 
-- (void)checkLogin
+- (void)sendtoProfile
 {
-    [IKEmployee login:@"" password:@""];
+    [self performSegueWithIdentifier:@"gotoProfile" sender:self];
 }
 
 /*- (void)getUserLogin
