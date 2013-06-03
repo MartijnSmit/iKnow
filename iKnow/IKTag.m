@@ -10,9 +10,14 @@
 
 @implementation IKTag
 
+- (NSString*)description
+{
+    return _name;
+}
+
 - (id)initWithValuesFromDictionary:(NSDictionary *)dictionary
 {
-    _ID = (NSInteger)[dictionary objectForKey:@"ID"];
+    _ID = [[dictionary objectForKey:@"ID"] integerValue];
     _name = [dictionary objectForKey:@"TagName"];
     _tagDescription = [dictionary objectForKey:@"Description"];
     
@@ -26,11 +31,6 @@
     _name = name;
     
     return [self init];
-}
-
-- (NSString*)description
-{
-    return [NSString stringWithFormat:@"%d\t%@\n%@\n\n", _ID, _name, _tagDescription];
 }
 
 + (NSArray*)tagsFromService

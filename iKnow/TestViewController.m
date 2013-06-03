@@ -13,14 +13,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    if ([IKEmployee login:@"bert.meijerink@stenden.com" password:@"test123"]) {
-        IKEmployee *employee = [[AppDelegate sharedAppDelegate] sessionEmployee];
-        
-        NSLog(@"Welcome, %@ %@", [employee firstName], [employee lastName]);
-    }
-    else {
-        NSLog(@"Fail");
-    }
+    NSArray *employees  = [IKEmployee employeesFromService];
+    IKEmployee *employee = (IKEmployee*)[employees objectAtIndex:0];
+    NSLog(@"%@", [employee skills]);
 }
 
 @end
