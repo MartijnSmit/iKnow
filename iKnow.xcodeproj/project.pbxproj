@@ -10,6 +10,7 @@
 		4DBFE40D1758ADBD00D6E5B0 /* IKEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFE40C1758ADBD00D6E5B0 /* IKEmployee.m */; };
 		4DBFE4101758ADCA00D6E5B0 /* IKTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFE40F1758ADCA00D6E5B0 /* IKTag.m */; };
 		4DD24C5D175C846F003BAF5F /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD24C5C175C846F003BAF5F /* TestViewController.m */; };
+		4DF75018175CBBD70099D94A /* IKSkill.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF75017175CBBD70099D94A /* IKSkill.m */; };
 		C10F33621739220B0080CFDC /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C10F33611739220B0080CFDC /* Twitter.framework */; };
 		C1117F8B175C9F92003329D3 /* Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = C1117F88175C9F92003329D3 /* Encryption.m */; };
 		C1117F8C175C9F92003329D3 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C1117F8A175C9F92003329D3 /* NSData+Base64.m */; };
@@ -99,6 +100,8 @@
 		4DBFE40F1758ADCA00D6E5B0 /* IKTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKTag.m; sourceTree = "<group>"; };
 		4DD24C5B175C846F003BAF5F /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		4DD24C5C175C846F003BAF5F /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		4DF75016175CBBD70099D94A /* IKSkill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKSkill.h; sourceTree = "<group>"; };
+		4DF75017175CBBD70099D94A /* IKSkill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKSkill.m; sourceTree = "<group>"; };
 		C10F33611739220B0080CFDC /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		C1117F87175C9F92003329D3 /* Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encryption.h; sourceTree = "<group>"; };
 		C1117F88175C9F92003329D3 /* Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Encryption.m; sourceTree = "<group>"; };
@@ -224,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				4DAD57001758AC450027EFB9 /* Employee */,
+				4DF75015175CBBC60099D94A /* Skill */,
 				4DAD56FF1758AC3D0027EFB9 /* Tag */,
 			);
 			name = "iKnow interfaces";
@@ -256,6 +260,7 @@
 			name = TestView;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		C1117F80175C9EF6003329D3 /* Encryption */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +270,15 @@
 				C1117F8A175C9F92003329D3 /* NSData+Base64.m */,
 			);
 			name = Encryption;
+=======
+		4DF75015175CBBC60099D94A /* Skill */ = {
+			isa = PBXGroup;
+			children = (
+				4DF75016175CBBD70099D94A /* IKSkill.h */,
+				4DF75017175CBBD70099D94A /* IKSkill.m */,
+			);
+			name = Skill;
+>>>>>>> b88f7e24759942e159b0de72bb4d623b9f018d1f
 			sourceTree = "<group>";
 		};
 		C1690FA0174E4E1F0084CBCD /* CenterView */ = {
@@ -642,8 +656,12 @@
 				4DBFE40D1758ADBD00D6E5B0 /* IKEmployee.m in Sources */,
 				4DBFE4101758ADCA00D6E5B0 /* IKTag.m in Sources */,
 				4DD24C5D175C846F003BAF5F /* TestViewController.m in Sources */,
+<<<<<<< HEAD
 				C1117F8B175C9F92003329D3 /* Encryption.m in Sources */,
 				C1117F8C175C9F92003329D3 /* NSData+Base64.m in Sources */,
+=======
+				4DF75018175CBBD70099D94A /* IKSkill.m in Sources */,
+>>>>>>> b88f7e24759942e159b0de72bb4d623b9f018d1f
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
