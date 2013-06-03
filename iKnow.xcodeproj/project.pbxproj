@@ -12,6 +12,10 @@
 		4DD24C5D175C846F003BAF5F /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD24C5C175C846F003BAF5F /* TestViewController.m */; };
 		4DF75018175CBBD70099D94A /* IKSkill.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF75017175CBBD70099D94A /* IKSkill.m */; };
 		C10F33621739220B0080CFDC /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C10F33611739220B0080CFDC /* Twitter.framework */; };
+		C1117F8B175C9F92003329D3 /* Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = C1117F88175C9F92003329D3 /* Encryption.m */; };
+		C1117F8C175C9F92003329D3 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C1117F8A175C9F92003329D3 /* NSData+Base64.m */; };
+		C1117F93175CC29E003329D3 /* profile_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C1117F91175CC29E003329D3 /* profile_icon.png */; };
+		C1117F94175CC29E003329D3 /* profile_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1117F92175CC29E003329D3 /* profile_icon@2x.png */; };
 		C1690FA5174E4EA20084CBCD /* RNSwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1690FA4174E4EA20084CBCD /* RNSwipeViewController.m */; };
 		C1690FAC174E4F090084CBCD /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1690FAB174E4F090084CBCD /* LeftViewController.m */; };
 		C1690FAF174E4F1E0084CBCD /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1690FAE174E4F1E0084CBCD /* RightViewController.m */; };
@@ -99,6 +103,12 @@
 		4DF75016175CBBD70099D94A /* IKSkill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKSkill.h; sourceTree = "<group>"; };
 		4DF75017175CBBD70099D94A /* IKSkill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKSkill.m; sourceTree = "<group>"; };
 		C10F33611739220B0080CFDC /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		C1117F87175C9F92003329D3 /* Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encryption.h; sourceTree = "<group>"; };
+		C1117F88175C9F92003329D3 /* Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Encryption.m; sourceTree = "<group>"; };
+		C1117F89175C9F92003329D3 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		C1117F8A175C9F92003329D3 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		C1117F91175CC29E003329D3 /* profile_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profile_icon.png; path = iKnow/profile_icon.png; sourceTree = "<group>"; };
+		C1117F92175CC29E003329D3 /* profile_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "profile_icon@2x.png"; path = "iKnow/profile_icon@2x.png"; sourceTree = "<group>"; };
 		C1690FA3174E4EA20084CBCD /* RNSwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSwipeViewController.h; sourceTree = "<group>"; };
 		C1690FA4174E4EA20084CBCD /* RNSwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSwipeViewController.m; sourceTree = "<group>"; };
 		C1690FAA174E4F090084CBCD /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
@@ -250,6 +260,17 @@
 			name = TestView;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+		C1117F80175C9EF6003329D3 /* Encryption */ = {
+			isa = PBXGroup;
+			children = (
+				C1117F87175C9F92003329D3 /* Encryption.h */,
+				C1117F88175C9F92003329D3 /* Encryption.m */,
+				C1117F89175C9F92003329D3 /* NSData+Base64.h */,
+				C1117F8A175C9F92003329D3 /* NSData+Base64.m */,
+			);
+			name = Encryption;
+=======
 		4DF75015175CBBC60099D94A /* Skill */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +278,7 @@
 				4DF75017175CBBD70099D94A /* IKSkill.m */,
 			);
 			name = Skill;
+>>>>>>> b88f7e24759942e159b0de72bb4d623b9f018d1f
 			sourceTree = "<group>";
 		};
 		C1690FA0174E4E1F0084CBCD /* CenterView */ = {
@@ -392,6 +414,8 @@
 		C1C465FD171EB92C005B5660 = {
 			isa = PBXGroup;
 			children = (
+				C1117F91175CC29E003329D3 /* profile_icon.png */,
+				C1117F92175CC29E003329D3 /* profile_icon@2x.png */,
 				C1C4660F171EB92C005B5660 /* iKnow */,
 				C1C46608171EB92C005B5660 /* Frameworks */,
 				C1C46607171EB92C005B5660 /* Products */,
@@ -420,6 +444,7 @@
 		C1C4660F171EB92C005B5660 /* iKnow */ = {
 			isa = PBXGroup;
 			children = (
+				C1117F80175C9EF6003329D3 /* Encryption */,
 				4DAD56FE1758AC2D0027EFB9 /* iKnow interfaces */,
 				C1773748175629D80030EAE8 /* Search Results */,
 				C1690FB3174E4F8D0084CBCD /* Storyboard */,
@@ -598,6 +623,8 @@
 				C177374417561D460030EAE8 /* searchresults_star.png in Resources */,
 				C177374517561D460030EAE8 /* twitterbg1.png in Resources */,
 				C177374717561E290030EAE8 /* twitterbg2.png in Resources */,
+				C1117F93175CC29E003329D3 /* profile_icon.png in Resources */,
+				C1117F94175CC29E003329D3 /* profile_icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,7 +656,12 @@
 				4DBFE40D1758ADBD00D6E5B0 /* IKEmployee.m in Sources */,
 				4DBFE4101758ADCA00D6E5B0 /* IKTag.m in Sources */,
 				4DD24C5D175C846F003BAF5F /* TestViewController.m in Sources */,
+<<<<<<< HEAD
+				C1117F8B175C9F92003329D3 /* Encryption.m in Sources */,
+				C1117F8C175C9F92003329D3 /* NSData+Base64.m in Sources */,
+=======
 				4DF75018175CBBD70099D94A /* IKSkill.m in Sources */,
+>>>>>>> b88f7e24759942e159b0de72bb4d623b9f018d1f
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

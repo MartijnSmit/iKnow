@@ -46,6 +46,33 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)openLogin:(id)sender
+{
+    /*NSLog(@"Wat is dit? %@", [[AppDelegate sharedAppDelegate] sessionEmployee]);
+    
+    if ([[AppDelegate sharedAppDelegate] sessionEmployee] != nil) {
+        self.navigationItem.rightBarButtonItem.tintColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"profile_icon.png"]];
+    }
+    else{
+        
+    }*/
+}
+
+- (IBAction)testRightitemBG:(id)sender {
+       // _rightBarButton.tintColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"profile_icon.png"]];
+    //NSLog(@"joaah %@", _rightBarButton.);
+    UIImage *buttonrightimage = [UIImage imageNamed:@"profile_icon.png"];
+    /*UIBarButtonItem *vettehap = [[UIBarButtonItem alloc]init];
+    [vettehap setBackgroundImage:buttonrightimage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    //[self.navigationItem setRightBarButtonItem:vettehap];
+    self.navigationItem.rightBarButtonItem = vettehap;
+    */
+    _rightBarButton.title = @"barry";
+    NSLog(@"ja tiefus button wat is je naam %@", _rightBarButton.title);
+    
+    [_rightBarButton setBackgroundImage:buttonrightimage forState:UIControlStateNormal barMetrics:0];
+}
+
 - (IBAction)openSearch:(id)sender {
     [self performSegueWithIdentifier:@"pushSearchResults" sender:self];
     /*if (! self.swipeController) {
@@ -54,6 +81,9 @@
     [self.swipeController showLeft];*/
 }
 
-- (IBAction)openLogin:(id)sender {
+
+- (void)viewDidAppear:(BOOL)animated
+{
+
 }
 @end
