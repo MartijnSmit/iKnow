@@ -19,6 +19,7 @@
 
 + (NSArray*)employeesFromService;
 + (BOOL)login:(NSString*)email password:(NSString*)password;
++ (void)logout;
 
 - (id)initWithValuesFromDictionary:(NSDictionary*)dictionary;
 - (BOOL)login:(NSString*)password;

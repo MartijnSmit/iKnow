@@ -10,7 +10,7 @@
 #import "IKEmployee.h"
 
 @implementation IKEmployee {
-    NSInteger token;
+    NSString *token;
 }
 
 - (NSString*)description
@@ -27,7 +27,7 @@
 - (id)initWithValuesFromDictionary:(NSDictionary *)dictionary
 {
     // Simple values
-    _ID = (NSInteger)[dictionary objectForKey:@"ID"];
+    _ID = [[NSString stringWithFormat:@"%@", [dictionary objectForKey:@"ID"]] integerValue];
     _firstName = [dictionary objectForKey:@"FirstName"];
     _lastName = [dictionary objectForKey:@"LastName"];
     _email = [dictionary objectForKey:@"Email"];
@@ -43,6 +43,16 @@
     
     // Return the object
     return [self init];
+}
+
+- (void)setToken:(NSString*)value
+{
+    token = value;
+}
+
+- (NSString*)token
+{
+    return token;
 }
 
 + (NSArray*)employeesFromService
@@ -70,6 +80,11 @@
 
 - (BOOL)login:(NSString*)password
 {
+    // Check wether the 
+    if ([[AppDelegate sharedAppDelegate] sessionEmployee] == self) {
+        return YES;
+    }
+    
     // Send the request
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://92.70.42.51:8000/IknowService.svc/login?email=%@&password=%@", _email, password]];
     NSData *data = [NSData dataWithContentsOfURL:url];
@@ -79,16 +94,45 @@
     NSDictionary *jsonRoot = [[[NSJSONSerialization JSONObjectWithData:data
                                                              options:kNilOptions
                                                                  error:&error] objectForKey:@"result"] objectForKey:@"value"];
-    IKEmployee *employee = [[IKEmployee alloc] initWithValuesFromDictionary:jsonRoot];
+    token = [jsonRoot objectForKey:@"Token"];
     
-    NSLog(@"%@", employee);
-    return NO;
+    if (token == nil || [token isEqualToString:@""]) {
+        [IKEmployee logout];
+        return NO;
+    }
+    else {
+        [[AppDelegate sharedAppDelegate] setSessionEmployee:self];
+        return YES;
+    }
 }
 
 + (BOOL)login:(NSString *)email password:(NSString *)password
 {
     // Send the request
-    return NO;
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://92.70.42.51:8000/IknowService.svc/login?email=%@&password=%@", email, password]];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    
+    // Parse the result
+    NSError *error;
+    NSDictionary *jsonRoot = [[[NSJSONSerialization JSONObjectWithData:data
+                                                               options:kNilOptions
+                                                                 error:&error] objectForKey:@"result"] objectForKey:@"value"];
+    IKEmployee *employee = [[IKEmployee alloc] initWithValuesFromDictionary:jsonRoot];
+    [employee setToken:[jsonRoot objectForKey:@"Token"]];
+    
+    if ([employee token] == nil || [[employee token] isEqualToString:@""]) {
+        [IKEmployee logout];
+        return NO;
+    }
+    else {
+        [[AppDelegate sharedAppDelegate] setSessionEmployee:employee];
+        return YES;
+    }
+}
+
++ (void)logout
+{
+    [[AppDelegate sharedAppDelegate] setSessionEmployee:nil];
 }
 
 @end
