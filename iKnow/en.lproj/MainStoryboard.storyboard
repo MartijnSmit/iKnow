@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="vtR-Yi-VQZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="EPD-lD-KKi">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -423,20 +423,6 @@
             </objects>
             <point key="canvasLocation" x="934" y="-252"/>
         </scene>
-        <!--Test View Controller-->
-        <scene sceneID="Hgn-DM-BVh">
-            <objects>
-                <viewController id="vtR-Yi-VQZ" customClass="TestViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Oh9-yk-vuN">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8ns-fW-9kB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-588" y="-1562"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="5cX-pN-BVx">
             <objects>
@@ -457,65 +443,26 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg.png" width="2048" height="1536"/>
-        <image name="login_bg.png" width="940" height="776"/>
-        <image name="login_button.png" width="430" height="117"/>
-        <image name="login_header.png" width="940" height="135"/>
-        <image name="login_icon.png" width="20" height="20"/>
-        <image name="profile_ava.png" width="331" height="343"/>
-        <image name="profile_ava_profile.png" width="286" height="268"/>
-        <image name="profile_bar.png" width="525" height="60"/>
-        <image name="profile_bg.png" width="1042" height="1337"/>
-        <image name="profile_header.png" width="1042" height="135"/>
-        <image name="profile_skill_header.png" width="870" height="122"/>
-        <image name="profile_star_empty.png" width="142" height="135"/>
-        <image name="profile_star_full.png" width="141" height="135"/>
-        <image name="profile_star_half.png" width="126" height="120"/>
-        <image name="searchresults_header.png" width="1974" height="121"/>
-        <image name="searchresults_header_logo.png" width="362" height="53"/>
-        <image name="skill_header.png" width="1042" height="135"/>
-        <image name="twitter_ava.png" width="243" height="235"/>
-        <image name="twitter_header.png" width="870" height="135"/>
+        <image name="bg.png" width="16" height="16"/>
+        <image name="login_bg.png" width="16" height="16"/>
+        <image name="login_button.png" width="16" height="16"/>
+        <image name="login_header.png" width="16" height="16"/>
+        <image name="login_icon.png" width="16" height="16"/>
+        <image name="profile_ava.png" width="16" height="16"/>
+        <image name="profile_ava_profile.png" width="16" height="16"/>
+        <image name="profile_bar.png" width="16" height="16"/>
+        <image name="profile_bg.png" width="16" height="16"/>
+        <image name="profile_header.png" width="16" height="16"/>
+        <image name="profile_skill_header.png" width="16" height="16"/>
+        <image name="profile_star_empty.png" width="16" height="16"/>
+        <image name="profile_star_full.png" width="16" height="16"/>
+        <image name="profile_star_half.png" width="16" height="16"/>
+        <image name="searchresults_header.png" width="16" height="16"/>
+        <image name="searchresults_header_logo.png" width="16" height="16"/>
+        <image name="skill_header.png" width="16" height="16"/>
+        <image name="twitter_ava.png" width="16" height="16"/>
+        <image name="twitter_header.png" width="16" height="16"/>
     </resources>
-    <classes>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="loggedIn:"/>
-            </relationships>
-        </class>
-        <class className="RNSwipeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RNSwipeViewController.h"/>
-        </class>
-        <class className="RightViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RightViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="goBack:"/>
-            </relationships>
-        </class>
-        <class className="RootViewController" superclassName="RNSwipeViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RootViewController.h"/>
-        </class>
-        <class className="SearchResultsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchResultsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="goBack:"/>
-                <relationship kind="action" name="goProfile:"/>
-            </relationships>
-        </class>
-        <class className="TestViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TestViewController.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="openLogin:"/>
-                <relationship kind="action" name="openSearch:"/>
-                <relationship kind="outlet" name="Table1" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="Table2" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
