@@ -13,6 +13,17 @@
     NSInteger token;
 }
 
+- (NSString*)description
+{
+    return [NSString stringWithFormat:@"ID: %d\nName: %@\nE-Mail: %@\nSkills: %@",
+            _ID,
+            [NSString stringWithFormat:@"%@, %@",
+             _lastName,
+             _firstName],
+            _email,
+            _skills];
+}
+
 - (id)initWithValuesFromDictionary:(NSDictionary *)dictionary
 {
     // Simple values
@@ -62,9 +73,15 @@
     // Send the request
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://92.70.42.51:8000/IknowService.svc/login?email=%@&password=%@", _email, password]];
     NSData *data = [NSData dataWithContentsOfURL:url];
-    NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+
+    // Parse the result
+    NSError *error;
+    NSDictionary *jsonRoot = [[[NSJSONSerialization JSONObjectWithData:data
+                                                             options:kNilOptions
+                                                                 error:&error] objectForKey:@"result"] objectForKey:@"value"];
+    IKEmployee *employee = [[IKEmployee alloc] initWithValuesFromDictionary:jsonRoot];
     
-    NSLog(@"%@", string);
+    NSLog(@"%@", employee);
     return NO;
 }
 

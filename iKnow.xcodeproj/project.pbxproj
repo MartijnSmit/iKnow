@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4DBFE40D1758ADBD00D6E5B0 /* IKEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFE40C1758ADBD00D6E5B0 /* IKEmployee.m */; };
 		4DBFE4101758ADCA00D6E5B0 /* IKTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFE40F1758ADCA00D6E5B0 /* IKTag.m */; };
+		4DD24C5D175C846F003BAF5F /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD24C5C175C846F003BAF5F /* TestViewController.m */; };
 		C10F33621739220B0080CFDC /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C10F33611739220B0080CFDC /* Twitter.framework */; };
 		C1690FA5174E4EA20084CBCD /* RNSwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1690FA4174E4EA20084CBCD /* RNSwipeViewController.m */; };
 		C1690FAC174E4F090084CBCD /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1690FAB174E4F090084CBCD /* LeftViewController.m */; };
@@ -92,6 +93,8 @@
 		4DBFE40C1758ADBD00D6E5B0 /* IKEmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKEmployee.m; sourceTree = "<group>"; };
 		4DBFE40E1758ADCA00D6E5B0 /* IKTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKTag.h; sourceTree = "<group>"; };
 		4DBFE40F1758ADCA00D6E5B0 /* IKTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKTag.m; sourceTree = "<group>"; };
+		4DD24C5B175C846F003BAF5F /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		4DD24C5C175C846F003BAF5F /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		C10F33611739220B0080CFDC /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		C1690FA3174E4EA20084CBCD /* RNSwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSwipeViewController.h; sourceTree = "<group>"; };
 		C1690FA4174E4EA20084CBCD /* RNSwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSwipeViewController.m; sourceTree = "<group>"; };
@@ -232,6 +235,15 @@
 				4DBFE40C1758ADBD00D6E5B0 /* IKEmployee.m */,
 			);
 			name = Employee;
+			sourceTree = "<group>";
+		};
+		4DD24C5A175C8459003BAF5F /* TestView */ = {
+			isa = PBXGroup;
+			children = (
+				4DD24C5B175C846F003BAF5F /* TestViewController.h */,
+				4DD24C5C175C846F003BAF5F /* TestViewController.m */,
+			);
+			name = TestView;
 			sourceTree = "<group>";
 		};
 		C1690FA0174E4E1F0084CBCD /* CenterView */ = {
@@ -402,6 +414,7 @@
 				C1690FA2174E4E460084CBCD /* RightView */,
 				C1D4C6D11754D441002712D8 /* BottomView */,
 				C1690FA0174E4E1F0084CBCD /* CenterView */,
+				4DD24C5A175C8459003BAF5F /* TestView */,
 				C1C46618171EB92C005B5660 /* AppDelegate.h */,
 				C1C46619171EB92C005B5660 /* AppDelegate.m */,
 				C1690FB0174E4F820084CBCD /* RootViewController.h */,
@@ -602,6 +615,7 @@
 				C177374E17562ABA0030EAE8 /* SearchResultsViewController.m in Sources */,
 				4DBFE40D1758ADBD00D6E5B0 /* IKEmployee.m in Sources */,
 				4DBFE4101758ADCA00D6E5B0 /* IKTag.m in Sources */,
+				4DD24C5D175C846F003BAF5F /* TestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
