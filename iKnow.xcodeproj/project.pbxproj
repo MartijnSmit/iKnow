@@ -10,6 +10,7 @@
 		4DBFE40D1758ADBD00D6E5B0 /* IKEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFE40C1758ADBD00D6E5B0 /* IKEmployee.m */; };
 		4DBFE4101758ADCA00D6E5B0 /* IKTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFE40F1758ADCA00D6E5B0 /* IKTag.m */; };
 		4DD24C5D175C846F003BAF5F /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD24C5C175C846F003BAF5F /* TestViewController.m */; };
+		4DF75018175CBBD70099D94A /* IKSkill.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF75017175CBBD70099D94A /* IKSkill.m */; };
 		C10F33621739220B0080CFDC /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C10F33611739220B0080CFDC /* Twitter.framework */; };
 		C1690FA5174E4EA20084CBCD /* RNSwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1690FA4174E4EA20084CBCD /* RNSwipeViewController.m */; };
 		C1690FAC174E4F090084CBCD /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1690FAB174E4F090084CBCD /* LeftViewController.m */; };
@@ -95,6 +96,8 @@
 		4DBFE40F1758ADCA00D6E5B0 /* IKTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKTag.m; sourceTree = "<group>"; };
 		4DD24C5B175C846F003BAF5F /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		4DD24C5C175C846F003BAF5F /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		4DF75016175CBBD70099D94A /* IKSkill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKSkill.h; sourceTree = "<group>"; };
+		4DF75017175CBBD70099D94A /* IKSkill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKSkill.m; sourceTree = "<group>"; };
 		C10F33611739220B0080CFDC /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		C1690FA3174E4EA20084CBCD /* RNSwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSwipeViewController.h; sourceTree = "<group>"; };
 		C1690FA4174E4EA20084CBCD /* RNSwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSwipeViewController.m; sourceTree = "<group>"; };
@@ -214,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				4DAD57001758AC450027EFB9 /* Employee */,
+				4DF75015175CBBC60099D94A /* Skill */,
 				4DAD56FF1758AC3D0027EFB9 /* Tag */,
 			);
 			name = "iKnow interfaces";
@@ -244,6 +248,15 @@
 				4DD24C5C175C846F003BAF5F /* TestViewController.m */,
 			);
 			name = TestView;
+			sourceTree = "<group>";
+		};
+		4DF75015175CBBC60099D94A /* Skill */ = {
+			isa = PBXGroup;
+			children = (
+				4DF75016175CBBD70099D94A /* IKSkill.h */,
+				4DF75017175CBBD70099D94A /* IKSkill.m */,
+			);
+			name = Skill;
 			sourceTree = "<group>";
 		};
 		C1690FA0174E4E1F0084CBCD /* CenterView */ = {
@@ -616,6 +629,7 @@
 				4DBFE40D1758ADBD00D6E5B0 /* IKEmployee.m in Sources */,
 				4DBFE4101758ADCA00D6E5B0 /* IKTag.m in Sources */,
 				4DD24C5D175C846F003BAF5F /* TestViewController.m in Sources */,
+				4DF75018175CBBD70099D94A /* IKSkill.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

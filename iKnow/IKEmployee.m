@@ -8,6 +8,8 @@
 // Mark
 
 #import "IKEmployee.h"
+#import "IKTag.h"
+#import "IKSkill.h"
 
 @implementation IKEmployee {
     NSString *token;
@@ -15,13 +17,7 @@
 
 - (NSString*)description
 {
-    return [NSString stringWithFormat:@"ID: %d\nName: %@\nE-Mail: %@\nSkills: %@",
-            _ID,
-            [NSString stringWithFormat:@"%@, %@",
-             _lastName,
-             _firstName],
-            _email,
-            _skills];
+    return [NSString stringWithFormat:@"%@ %@", _firstName, _lastName];
 }
 
 - (id)initWithValuesFromDictionary:(NSDictionary *)dictionary
@@ -39,7 +35,13 @@
     _photo = [UIImage imageWithData:photoData];
     
     // Skills
-    // nog te implemeteren
+    NSArray *skills = [dictionary objectForKey:@"Skills"];
+    NSMutableArray *tempSkills = [[NSMutableArray alloc] init];
+    for (NSDictionary *skillDict in skills) {
+        IKSkill *skill = [[IKSkill alloc] initWithValuesFromDictionary:skillDict forEmployee:self];
+        [tempSkills addObject:skill];
+    }
+    _skills = tempSkills;
     
     // Return the object
     return [self init];
