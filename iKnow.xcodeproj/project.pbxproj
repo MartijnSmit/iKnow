@@ -10,6 +10,8 @@
 		4DBFE40D1758ADBD00D6E5B0 /* IKEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFE40C1758ADBD00D6E5B0 /* IKEmployee.m */; };
 		4DBFE4101758ADCA00D6E5B0 /* IKTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFE40F1758ADCA00D6E5B0 /* IKTag.m */; };
 		C10F33621739220B0080CFDC /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C10F33611739220B0080CFDC /* Twitter.framework */; };
+		C15E68911758C10D0022905F /* Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = C15E688E1758C10D0022905F /* Encryption.m */; };
+		C15E68921758C10D0022905F /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C15E68901758C10D0022905F /* NSData+Base64.m */; };
 		C1690FA5174E4EA20084CBCD /* RNSwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1690FA4174E4EA20084CBCD /* RNSwipeViewController.m */; };
 		C1690FAC174E4F090084CBCD /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1690FAB174E4F090084CBCD /* LeftViewController.m */; };
 		C1690FAF174E4F1E0084CBCD /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1690FAE174E4F1E0084CBCD /* RightViewController.m */; };
@@ -93,6 +95,10 @@
 		4DBFE40E1758ADCA00D6E5B0 /* IKTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKTag.h; sourceTree = "<group>"; };
 		4DBFE40F1758ADCA00D6E5B0 /* IKTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKTag.m; sourceTree = "<group>"; };
 		C10F33611739220B0080CFDC /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		C15E688D1758C10D0022905F /* Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encryption.h; sourceTree = "<group>"; };
+		C15E688E1758C10D0022905F /* Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Encryption.m; sourceTree = "<group>"; };
+		C15E688F1758C10D0022905F /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		C15E68901758C10D0022905F /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		C1690FA3174E4EA20084CBCD /* RNSwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSwipeViewController.h; sourceTree = "<group>"; };
 		C1690FA4174E4EA20084CBCD /* RNSwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSwipeViewController.m; sourceTree = "<group>"; };
 		C1690FAA174E4F090084CBCD /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
@@ -232,6 +238,17 @@
 				4DBFE40C1758ADBD00D6E5B0 /* IKEmployee.m */,
 			);
 			name = Employee;
+			sourceTree = "<group>";
+		};
+		C15E68931758C1130022905F /* Encryption */ = {
+			isa = PBXGroup;
+			children = (
+				C15E688D1758C10D0022905F /* Encryption.h */,
+				C15E688E1758C10D0022905F /* Encryption.m */,
+				C15E688F1758C10D0022905F /* NSData+Base64.h */,
+				C15E68901758C10D0022905F /* NSData+Base64.m */,
+			);
+			name = Encryption;
 			sourceTree = "<group>";
 		};
 		C1690FA0174E4E1F0084CBCD /* CenterView */ = {
@@ -395,6 +412,7 @@
 		C1C4660F171EB92C005B5660 /* iKnow */ = {
 			isa = PBXGroup;
 			children = (
+				C15E68931758C1130022905F /* Encryption */,
 				4DAD56FE1758AC2D0027EFB9 /* iKnow interfaces */,
 				C1773748175629D80030EAE8 /* Search Results */,
 				C1690FB3174E4F8D0084CBCD /* Storyboard */,
@@ -602,6 +620,8 @@
 				C177374E17562ABA0030EAE8 /* SearchResultsViewController.m in Sources */,
 				4DBFE40D1758ADBD00D6E5B0 /* IKEmployee.m in Sources */,
 				4DBFE4101758ADCA00D6E5B0 /* IKTag.m in Sources */,
+				C15E68911758C10D0022905F /* Encryption.m in Sources */,
+				C15E68921758C10D0022905F /* NSData+Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
