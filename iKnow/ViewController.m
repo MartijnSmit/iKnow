@@ -7,8 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UIViewController+RNSwipeViewController.h"
-#import "RNSwipeViewController.h"
+#import "LoginViewController.h"
 
 @interface ViewController ()
 
@@ -19,6 +18,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    /*UIImage *buttonrightimage = [UIImage imageNamed:@"profile_icon.png"];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:buttonrightimage style:UIBarButtonItemStyleBordered target:self action:@selector(openMethode)];*/
     
     // Set tables
     // Table1
@@ -38,22 +40,46 @@
     [[self Table2] setDelegate:[self dg2]];
 
     [[self Table2] reloadData];
+    
+    if ([[AppDelegate sharedAppDelegate] sessionEmployee] != nil)
+    {
+        UIImage *buttonrightimage = [UIImage imageNamed:@"profile_icon.png"];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:buttonrightimage style:UIBarButtonItemStyleBordered target:self action:@selector(showProfile)];
+    }
+
 }
 
-- (void)didReceiveMemoryWarning
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    UIViewController *target = [segue destinationViewController];
+    if ([target isKindOfClass:[LoginViewController class]]) {
+        LoginViewController *loginTarget = (LoginViewController*)target;
+        [loginTarget setParentView:self];
+    }
 }
 
 - (IBAction)openSearch:(id)sender {
-    [self performSegueWithIdentifier:@"pushSearchResults" sender:self];
+    //[self performSegueWithIdentifier:@"pushSearchResults" sender:self];
     /*if (! self.swipeController) {
         NSLog(@"swipe controller not found");
     }
     [self.swipeController showLeft];*/
 }
 
-- (IBAction)openLogin:(id)sender {
+- (IBAction)openLogin:(id)sender
+{
+}
+
+- (void)showProfile
+{
+    [self performSegueWithIdentifier:@"pushProfile" sender:self];
+}
+
+- (void)loggedinCheck
+{
+    if ([[AppDelegate sharedAppDelegate] sessionEmployee] != nil) {
+        UIImage *buttonrightimage = [UIImage imageNamed:@"profile_icon.png"];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:buttonrightimage style:UIBarButtonItemStyleBordered target:self action:@selector(showProfile)];
+    }
 }
 @end

@@ -2,7 +2,7 @@
 //  ProfileViewController.m
 //  iKnow
 //
-//  Created by Martijn Smit on 28-05-13.
+//  Created by Martijn Smit on 04-06-13.
 //  Copyright (c) 2013 WeMa IT. All rights reserved.
 //
 
@@ -26,7 +26,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	
+    // Set all the labels
+    IKEmployee *employee = [[AppDelegate sharedAppDelegate] sessionEmployee];
+    _nameLabel.text = [NSString stringWithFormat:@"%@ %@", [employee firstName], [employee lastName]];
+    [_emailButton setLineBreakMode:UILineBreakModeWordWrap];
+    [_emailButton setTitle:[employee email] forState:UIControlStateNormal];
+    _profileImage.image = [employee photo];
+    NSLog(@"skills?? %@", [employee skills]);
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,8 +42,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)backtoSearch:(id)sender {
+- (IBAction)goBack:(id)sender {
     
-    [self performSegueWithIdentifier:@"BacktoStart" sender:self];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

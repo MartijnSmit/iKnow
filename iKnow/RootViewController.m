@@ -7,6 +7,8 @@
 //
 
 #import "RootViewController.h"
+#import "UIViewController+RNSwipeViewController.h"
+#import "RNSwipeViewController.h"
 #define IS_IPAD UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
 
 @interface RootViewController ()
@@ -46,6 +48,15 @@
 
 - (void)swipeController:(RNSwipeViewController *)swipeController didShowController:(UIViewController *)controller {
     NSLog(@"did show");
+}
+
+- (void)testmethode
+{
+    NSLog(@"geklikt op rightbuttonbar");
+    if (! self.swipeController) {
+     NSLog(@"swipe controller not found");
+     }
+     [self.swipeController showRight];
 }
 
 @end

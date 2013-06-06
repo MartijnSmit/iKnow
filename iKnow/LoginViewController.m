@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "ViewController.h"
 
 @implementation LoginViewController
 
@@ -22,8 +23,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    //[self getUserLogin];
+    [_username becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -32,7 +32,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)handleTapBehind:(UITapGestureRecognizer *)sender
+/*- (void)handleTapBehind:(UITapGestureRecognizer *)sender
 {
     if (sender.state == UIGestureRecognizerStateEnded)
     {
@@ -47,53 +47,43 @@
             [self dismissViewControllerAnimated:YES completion:nil];
         }
     }
-}
+}*/
 
 - (void)viewDidAppear:(BOOL)animated
 {
     
-    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapBehind:)];
+    /*UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapBehind:)];
     
     [recognizer setNumberOfTapsRequired:1];
     recognizer.cancelsTouchesInView = NO; //So the user can still interact with controls in the modal view
-    [self.view.window addGestureRecognizer:recognizer];
+    [self.view.window addGestureRecognizer:recognizer];*/
     
 }
 
-- (void)loggedIn:(id)sender
+
+- (IBAction)recoveryPassword:(id)sender
 {
-    //NSLog(@"Logged in");
+    [self dismissViewControllerAnimated:YES completion:nil];
+    /*UIAlertView *recovererror = [[UIAlertView alloc]initWithTitle:@"Recover your Password" message:@"You have lost SEND A MAIL HAHA your Password?" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Cancel", nil];
+    [recovererror show];*/
 }
 
-/*-(void)viewWillAppear:(BOOL)animated
+- (IBAction)login:(id)sender
 {
-        [self.view.superview setBounds:CGRectMake(0, 0, 450, 480)];
-}*/
+    if ([IKEmployee login:_username.text password:_password.text]) {
+         IKEmployee *employee = [[AppDelegate sharedAppDelegate] sessionEmployee];
 
-- (void)checkLogin
-{
-    [IKEmployee login:@"" password:@""];
-}
-
-/*- (void)getUserLogin
-{
-    NSError *error;
-    NSData *loginData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://92.70.42.51:8000/IknowService.svc//login?email=jeroen.pijpker@stenden.com&password=test123"]];
-    NSDictionary *loginItems;
-    loginItems = [NSJSONSerialization JSONObjectWithData:loginData
-                                            options:kNilOptions
-                                                   error:&error];
-    NSLog(@"data? %@", loginItems);
-    
-    for(NSDictionary *data in loginItems)
-    {
-        // Key is het object
-        if (data)
-        {
-            NSString *key = [data objectForKey:@"key"];
-            NSLog(@"key is?: %@", key);
-        }
+        NSLog(@"Welcome, %@ %@", [employee firstName], [employee lastName]);
+        ViewController *view = _parentView;
+        [view loggedinCheck];
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
-}*/
+    else {
+        UIAlertView *LoginFailed = [[UIAlertView alloc]initWithTitle:@"Login failed" message:@"Your username or password is incorrect. Please try again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [LoginFailed show];
+        NSLog(@"Fail");
+    }
+}
 
 @end

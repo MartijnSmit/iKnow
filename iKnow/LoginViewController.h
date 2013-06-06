@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIViewController+RNSwipeViewController.h"
-#import "RNSwipeViewController.h"
 #import "IKEmployee.h"
+
+@class ViewController;
 
 @interface LoginViewController : UIViewController
 
-- (IBAction)loggedIn:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *username;
+@property (weak, nonatomic) IBOutlet UITextField *password;
+@property (strong, nonatomic) ViewController *parentView;
+
+- (IBAction)recoveryPassword:(id)sender;
+- (IBAction)login:(id)sender;
 @end
