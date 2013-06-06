@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+#import <Twitter/Twitter.h>
 #import "Table1DataSource.h"
 #import "Table2DataSource.h"
 #import "Table1Delegate.h"
@@ -26,4 +28,6 @@
 - (IBAction)openSearch:(id)sender;
 - (IBAction)openLogin:(id)sender;
 - (void)loggedinCheck;
+- (IBAction)openTwitter:(id)sender;
 @end
+ 

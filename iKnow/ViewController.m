@@ -82,4 +82,21 @@
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:buttonrightimage style:UIBarButtonItemStyleBordered target:self action:@selector(showProfile)];
     }
 }
+
+- (IBAction)openTwitter:(id)sender {
+    if([TWTweetComposeViewController canSendTweet]) {
+        TWTweetComposeViewController *tweetComposer = [[TWTweetComposeViewController alloc]
+                                                       
+                                                       init];
+        [tweetComposer setInitialText:@"@iKnow"];
+        [self presentModalViewController:tweetComposer animated:YES];
+        
+    }
+    else {
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"Oeps er ging iets fout" message:@"Niet mogelijk om te tweeten \ue40e heb je de twitter app wel geinstalleerd?"
+                                  delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alertView show];
+    }
+}
 @end
