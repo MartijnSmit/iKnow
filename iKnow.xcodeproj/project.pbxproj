@@ -259,6 +259,29 @@
 			name = Skill;
 			sourceTree = "<group>";
 		};
+		4DFC1112176083B5004547AB /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C1690FB0174E4F820084CBCD /* RootViewController.h */,
+				C1690FB1174E4F820084CBCD /* RootViewController.m */,
+				C1D4C6D11754D441002712D8 /* BottomView */,
+				C1690FA0174E4E1F0084CBCD /* CenterView */,
+				C1690FA1174E4E290084CBCD /* LeftView */,
+				C1690FA2174E4E460084CBCD /* RightView */,
+				C1773748175629D80030EAE8 /* Search Results */,
+				4DD24C5A175C8459003BAF5F /* TestView */,
+			);
+			name = "View controllers";
+			sourceTree = "<group>";
+		};
+		4DFC11131760848F004547AB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4DAD56FE1758AC2D0027EFB9 /* iKnow interfaces */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		C1690FA0174E4E1F0084CBCD /* CenterView */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,18 +443,11 @@
 		C1C4660F171EB92C005B5660 /* iKnow */ = {
 			isa = PBXGroup;
 			children = (
-				4DAD56FE1758AC2D0027EFB9 /* iKnow interfaces */,
-				C1773748175629D80030EAE8 /* Search Results */,
+				4DFC11131760848F004547AB /* Classes */,
+				4DFC1112176083B5004547AB /* View controllers */,
 				C1690FB3174E4F8D0084CBCD /* Storyboard */,
-				C1690FA1174E4E290084CBCD /* LeftView */,
-				C1690FA2174E4E460084CBCD /* RightView */,
-				C1D4C6D11754D441002712D8 /* BottomView */,
-				C1690FA0174E4E1F0084CBCD /* CenterView */,
-				4DD24C5A175C8459003BAF5F /* TestView */,
 				C1C46618171EB92C005B5660 /* AppDelegate.h */,
 				C1C46619171EB92C005B5660 /* AppDelegate.m */,
-				C1690FB0174E4F820084CBCD /* RootViewController.h */,
-				C1690FB1174E4F820084CBCD /* RootViewController.m */,
 				C1690FC2174E52550084CBCD /* images */,
 				C1C46610171EB92C005B5660 /* Supporting Files */,
 			);

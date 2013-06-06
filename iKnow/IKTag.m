@@ -57,4 +57,54 @@
     return tags;
 }
 
++ (NSArray*)search:(NSArray *)tags
+{
+    
+    
+    //NSURL *url = [NSURL URLWithString:@"http://92.70.42.51:8000/IknowService.svc/search/java,xml,object%20oriented"];
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

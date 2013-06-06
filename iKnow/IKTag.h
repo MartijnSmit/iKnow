@@ -18,5 +18,6 @@
 - (id)initWithID:(NSInteger)tagID
             name:(NSString*)name;
 + (NSArray*)tagsFromService;
++ (NSArray*)search:(NSArray*)tags;
 
 @end
