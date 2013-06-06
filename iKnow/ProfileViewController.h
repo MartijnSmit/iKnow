@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 #import "IKEmployee.h"
 #import "IKSkill.h"
 
-@interface ProfileViewController : UIViewController
+@interface ProfileViewController : UIViewController <MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *emailLabel;
@@ -20,4 +21,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *skillPercentage;
 @property (weak, nonatomic) IBOutlet UITextView *skillDescription;
 @property (weak, nonatomic) IBOutlet UIButton *emailButton;
+- (IBAction)openEmail:(id)sender;
+
 @end

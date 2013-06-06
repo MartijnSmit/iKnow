@@ -248,6 +248,14 @@
                                     <action selector="openTwitter:" destination="RGv-we-xyW" eventType="touchUpInside" id="wcN-gI-AvN"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="skill_header_title.png" id="qvr-V0-I7Q">
+                                <rect key="frame" x="108" y="18" width="159" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="twitter_header_title.png" id="zKh-EL-nlJ">
+                                <rect key="frame" x="458" y="20" width="218" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -300,15 +308,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="profile_ava.png" id="cuS-ux-6EM">
-                                <rect key="frame" x="20" y="134" width="119" height="114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="20" y="114" width="119" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="profile_ava.png" id="Ngj-Wa-MwX">
                                 <rect key="frame" x="397" y="113" width="175" height="173"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="profile_ava_profile.png" id="JMT-71-xxj">
-                                <rect key="frame" x="28" y="147" width="102" height="101"/>
+                                <rect key="frame" x="24" y="118" width="111" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="profile_bar.png" id="VZl-Qa-gaB">
@@ -323,15 +331,15 @@
                                 <rect key="frame" x="165" y="118" width="215" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Naam" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="15g-eH-i0K">
-                                <rect key="frame" x="172" y="117" width="74" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="15g-eH-i0K">
+                                <rect key="frame" x="172" y="117" width="207" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Contactgegevens" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WH5-Zl-SB0">
-                                <rect key="frame" x="172" y="202" width="125" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Contact" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WH5-Zl-SB0">
+                                <rect key="frame" x="172" y="202" width="207" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -373,17 +381,31 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aG9-q0-fQq">
-                                <rect key="frame" x="172" y="232" width="196" height="44"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aXl-dp-r4J">
+                                <rect key="frame" x="177" y="232" width="196" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="small_mail_icon.png" id="NMf-AP-scf">
+                                <rect key="frame" x="150" y="244" width="23" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZZL-uC-DLl">
+                                <rect key="frame" x="150" y="232" width="229" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="openEmail:" destination="xLn-Cb-Jo0" eventType="touchUpInside" id="fWM-aE-umV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -394,7 +416,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="emailButton" destination="aG9-q0-fQq" id="RuP-3T-ZBX"/>
+                        <outlet property="emailLabel" destination="aXl-dp-r4J" id="z9X-AF-zNr"/>
                         <outlet property="nameLabel" destination="O9e-5k-zZQ" id="21i-Pa-Gtz"/>
                         <outlet property="profileImage" destination="JMT-71-xxj" id="XU6-Nv-RkI"/>
                         <outlet property="skillDescription" destination="622-N0-1Xo" id="yxw-ef-EcP"/>
@@ -440,8 +462,11 @@
         <image name="searchresults_header.png" width="1974" height="121"/>
         <image name="searchresults_header_logo.png" width="362" height="53"/>
         <image name="skill_header.png" width="1042" height="135"/>
+        <image name="skill_header_title.png" width="423" height="96"/>
+        <image name="small_mail_icon.png" width="63" height="52"/>
         <image name="twitter_ava.png" width="243" height="235"/>
         <image name="twitter_header.png" width="870" height="135"/>
+        <image name="twitter_header_title.png" width="596" height="83"/>
         <image name="twitter_post_bg.png" width="210" height="210"/>
         <image name="twitter_post_icon.png" width="47" height="47"/>
     </resources>
@@ -459,6 +484,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ProfileViewController.h"/>
             <relationships>
                 <relationship kind="action" name="goBack:"/>
+                <relationship kind="action" name="openEmail:"/>
                 <relationship kind="outlet" name="emailButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="emailLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
