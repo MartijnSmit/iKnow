@@ -12,9 +12,10 @@
 		4DD24C5D175C846F003BAF5F /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD24C5C175C846F003BAF5F /* TestViewController.m */; };
 		4DF75018175CBBD70099D94A /* IKSkill.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF75017175CBBD70099D94A /* IKSkill.m */; };
 		C10F33621739220B0080CFDC /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C10F33611739220B0080CFDC /* Twitter.framework */; };
+		C14E61A1175DE2A90022BCF6 /* profile_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14E61A0175DE2A90022BCF6 /* profile_icon@2x.png */; };
+		C14E61A3175DE2AF0022BCF6 /* profile_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C14E61A2175DE2AF0022BCF6 /* profile_icon.png */; };
+		C14E61A6175E12BD0022BCF6 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C14E61A5175E12BD0022BCF6 /* ProfileViewController.m */; };
 		C1690FA5174E4EA20084CBCD /* RNSwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1690FA4174E4EA20084CBCD /* RNSwipeViewController.m */; };
-		C1690FAC174E4F090084CBCD /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1690FAB174E4F090084CBCD /* LeftViewController.m */; };
-		C1690FAF174E4F1E0084CBCD /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1690FAE174E4F1E0084CBCD /* RightViewController.m */; };
 		C1690FB2174E4F820084CBCD /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1690FB1174E4F820084CBCD /* RootViewController.m */; };
 		C1690FB7174E50C50084CBCD /* RNDirectionPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C1690FB6174E50C50084CBCD /* RNDirectionPanGestureRecognizer.m */; };
 		C1690FBA174E50FC0084CBCD /* UIViewController+RNSwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1690FB9174E50FC0084CBCD /* UIViewController+RNSwipeViewController.m */; };
@@ -99,12 +100,12 @@
 		4DF75016175CBBD70099D94A /* IKSkill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKSkill.h; sourceTree = "<group>"; };
 		4DF75017175CBBD70099D94A /* IKSkill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKSkill.m; sourceTree = "<group>"; };
 		C10F33611739220B0080CFDC /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		C14E61A0175DE2A90022BCF6 /* profile_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile_icon@2x.png"; sourceTree = "<group>"; };
+		C14E61A2175DE2AF0022BCF6 /* profile_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_icon.png; sourceTree = "<group>"; };
+		C14E61A4175E12BD0022BCF6 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		C14E61A5175E12BD0022BCF6 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		C1690FA3174E4EA20084CBCD /* RNSwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSwipeViewController.h; sourceTree = "<group>"; };
 		C1690FA4174E4EA20084CBCD /* RNSwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSwipeViewController.m; sourceTree = "<group>"; };
-		C1690FAA174E4F090084CBCD /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
-		C1690FAB174E4F090084CBCD /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
-		C1690FAD174E4F1E0084CBCD /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
-		C1690FAE174E4F1E0084CBCD /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
 		C1690FB0174E4F820084CBCD /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		C1690FB1174E4F820084CBCD /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		C1690FB4174E507F0084CBCD /* RNSwipeViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSwipeViewControllerDelegate.h; sourceTree = "<group>"; };
@@ -294,15 +295,6 @@
 			name = CenterView;
 			sourceTree = "<group>";
 		};
-		C1690FA1174E4E290084CBCD /* LeftView */ = {
-			isa = PBXGroup;
-			children = (
-				C1690FAA174E4F090084CBCD /* LeftViewController.h */,
-				C1690FAB174E4F090084CBCD /* LeftViewController.m */,
-			);
-			name = LeftView;
-			sourceTree = "<group>";
-		};
 		C1690FA2174E4E460084CBCD /* RightView */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +333,8 @@
 		C1690FC2174E52550084CBCD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C14E61A2175DE2AF0022BCF6 /* profile_icon.png */,
+				C14E61A0175DE2A90022BCF6 /* profile_icon@2x.png */,
 				C177374617561E290030EAE8 /* twitterbg2.png */,
 				C177373417561D460030EAE8 /* searchresults_ava_profile.png */,
 				C177373517561D460030EAE8 /* searchresults_bg.png */,
@@ -446,6 +440,13 @@
 				4DFC11131760848F004547AB /* Classes */,
 				4DFC1112176083B5004547AB /* View controllers */,
 				C1690FB3174E4F8D0084CBCD /* Storyboard */,
+<<<<<<< HEAD
+=======
+				C1690FA2174E4E460084CBCD /* RightView */,
+				C1D4C6D11754D441002712D8 /* BottomView */,
+				C1690FA0174E4E1F0084CBCD /* CenterView */,
+				4DD24C5A175C8459003BAF5F /* TestView */,
+>>>>>>> 400f5a891fd2069525c0b99022234d414c4d9030
 				C1C46618171EB92C005B5660 /* AppDelegate.h */,
 				C1C46619171EB92C005B5660 /* AppDelegate.m */,
 				C1690FC2174E52550084CBCD /* images */,
@@ -481,8 +482,8 @@
 		C1D4C6D51754DCA5002712D8 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				C1690FAD174E4F1E0084CBCD /* RightViewController.h */,
-				C1690FAE174E4F1E0084CBCD /* RightViewController.m */,
+				C14E61A4175E12BD0022BCF6 /* ProfileViewController.h */,
+				C14E61A5175E12BD0022BCF6 /* ProfileViewController.m */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -614,6 +615,8 @@
 				C177374417561D460030EAE8 /* searchresults_star.png in Resources */,
 				C177374517561D460030EAE8 /* twitterbg1.png in Resources */,
 				C177374717561E290030EAE8 /* twitterbg2.png in Resources */,
+				C14E61A1175DE2A90022BCF6 /* profile_icon@2x.png in Resources */,
+				C14E61A3175DE2AF0022BCF6 /* profile_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,8 +635,6 @@
 				C1FCB0861737D8D100914F5D /* Table2DataSource.m in Sources */,
 				C1FCB0871737D8D100914F5D /* Table2Delegate.m in Sources */,
 				C1690FA5174E4EA20084CBCD /* RNSwipeViewController.m in Sources */,
-				C1690FAC174E4F090084CBCD /* LeftViewController.m in Sources */,
-				C1690FAF174E4F1E0084CBCD /* RightViewController.m in Sources */,
 				C1690FB2174E4F820084CBCD /* RootViewController.m in Sources */,
 				C1690FB7174E50C50084CBCD /* RNDirectionPanGestureRecognizer.m in Sources */,
 				C1690FBA174E50FC0084CBCD /* UIViewController+RNSwipeViewController.m in Sources */,
@@ -646,6 +647,7 @@
 				4DBFE4101758ADCA00D6E5B0 /* IKTag.m in Sources */,
 				4DD24C5D175C846F003BAF5F /* TestViewController.m in Sources */,
 				4DF75018175CBBD70099D94A /* IKSkill.m in Sources */,
+				C14E61A6175E12BD0022BCF6 /* ProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
