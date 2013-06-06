@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "IKEmployee.h"
+#import "IKTag.h"
 
 @interface TestViewController : UIViewController
 

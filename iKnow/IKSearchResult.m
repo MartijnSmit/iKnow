@@ -10,6 +10,11 @@
 
 @implementation IKSearchResult
 
+- (NSString*)description
+{
+    return [NSString stringWithFormat:@"%@ %@ - %d%%", [_employee firstName], [_employee lastName], _relevance];
+}
+
 - (id)initWithEmployee:(IKEmployee *)employee relevance:(NSInteger)relevance
 {
     _employee = employee;
@@ -21,6 +26,7 @@
 {
     _employee = [[IKEmployee alloc] initWithValuesFromDictionary:[dictionary objectForKey:@"Key"]];
     _relevance = [[NSString stringWithFormat:@"%@", [dictionary objectForKey:@"Value"]] integerValue];
+    return [self init];
 }
 
 @end
