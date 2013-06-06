@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IKSearchResult.h"
 
 @interface IKTag : NSObject
 
@@ -18,5 +19,6 @@
 - (id)initWithID:(NSInteger)tagID
             name:(NSString*)name;
 + (NSArray*)tagsFromService;
++ (NSArray*)searchEmployeesByTags:(NSArray*)tags;
 
 @end

@@ -48,8 +48,7 @@
     
     // Compose the return value
     NSMutableArray *tags = [[NSMutableArray alloc] init];
-    for (NSDictionary *tagDict in jsonTags)
-    {
+    for (NSDictionary *tagDict in jsonTags) {
         IKTag *tag = [[IKTag alloc] initWithValuesFromDictionary:tagDict];
         [tags addObject:tag];
     }
@@ -57,4 +56,74 @@
     return tags;
 }
 
++ (NSArray*)searchEmployeesByTags:(NSArray *)tags
+{
+    // Load the search results from the service
+    NSURL *url = [NSURL URLWithString:@"http://92.70.42.51:8000/IknowService.svc/search/java,xml,object%20oriented"];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    
+    // Process the response
+    NSError *error;
+    NSDictionary *jsonRoot = [NSJSONSerialization JSONObjectWithData:data
+                                                            options:kNilOptions
+                                                              error:&error];
+    NSArray *searchResults = [jsonRoot objectForKey:@"result"];
+    
+    // Compose the return value
+    NSMutableArray *results = [[NSMutableArray alloc] init];
+    for (NSDictionary *resultDict in searchResults) {
+        IKSearchResult *result = [[IKSearchResult alloc] initWithValuesFromDictionary:resultDict];
+        [results addObject:result];
+    }
+    return results;
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
