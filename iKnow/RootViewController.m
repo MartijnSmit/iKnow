@@ -7,6 +7,8 @@
 //
 
 #import "RootViewController.h"
+#import "UIViewController+RNSwipeViewController.h"
+#import "RNSwipeViewController.h"
 #define IS_IPAD UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
 
 @interface RootViewController ()
@@ -30,23 +32,6 @@
     }
     
     self.swipeDelegate = self;
-    
-    /*NSLog(@"Wat is dit? %@", [[AppDelegate sharedAppDelegate] sessionEmployee]);
-     
-     if ([[AppDelegate sharedAppDelegate] sessionEmployee] != nil) {
-     self.navigationItem.rightBarButtonItem.tintColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"profile_icon.png"]];
-     }
-     else{
-     
-     }*/
-    
-    // _rightBarButton.tintColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"profile_icon.png"]];
-    //NSLog(@"joaah %@", _rightBarButton.);
-    UIImage *buttonrightimage = [UIImage imageNamed:@"search_icon.png"];
-    UIBarButtonItem *vettehap = [[UIBarButtonItem alloc]init];
-     [vettehap setBackgroundImage:buttonrightimage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-     //[self.navigationItem setRightBarButtonItem:vettehap];
-     self.navigationItem.rightBarButtonItem = vettehap;
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,6 +48,15 @@
 
 - (void)swipeController:(RNSwipeViewController *)swipeController didShowController:(UIViewController *)controller {
     NSLog(@"did show");
+}
+
+- (void)testmethode
+{
+    NSLog(@"geklikt op rightbuttonbar");
+    if (! self.swipeController) {
+     NSLog(@"swipe controller not found");
+     }
+     [self.swipeController showRight];
 }
 
 @end

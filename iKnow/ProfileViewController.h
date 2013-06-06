@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IKEmployee.h"
+#import "IKSkill.h"
 
 @interface ProfileViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *twitterLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+@property (weak, nonatomic) IBOutlet UILabel *skillLabel;
+@property (weak, nonatomic) IBOutlet UILabel *skillPercentage;
+@property (weak, nonatomic) IBOutlet UITextView *skillDescription;
+@property (weak, nonatomic) IBOutlet UIButton *emailButton;
 @end

@@ -26,7 +26,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	
+    // Set all the labels
+    IKEmployee *employee = [[AppDelegate sharedAppDelegate] sessionEmployee];
+    _nameLabel.text = [NSString stringWithFormat:@"%@ %@", [employee firstName], [employee lastName]];
+    [_emailButton setLineBreakMode:UILineBreakModeWordWrap];
+    [_emailButton setTitle:[employee email] forState:UIControlStateNormal];
+    _profileImage.image = [employee photo];
+    NSLog(@"skills?? %@", [employee skills]);
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +42,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)goBack:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

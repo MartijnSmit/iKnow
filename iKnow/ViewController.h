@@ -11,6 +11,10 @@
 #import "Table2DataSource.h"
 #import "Table1Delegate.h"
 #import "Table2Delegate.h"
+#import "UIViewController+RNSwipeViewController.h"
+#import "RNSwipeViewController.h"
+
+@class LoginViewController;
 
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITableView *Table1;
@@ -23,4 +27,5 @@
 
 - (IBAction)openSearch:(id)sender;
 - (IBAction)openLogin:(id)sender;
+- (void)loggedinCheck;
 @end
