@@ -30,6 +30,23 @@
     }
     
     self.swipeDelegate = self;
+    
+    /*NSLog(@"Wat is dit? %@", [[AppDelegate sharedAppDelegate] sessionEmployee]);
+     
+     if ([[AppDelegate sharedAppDelegate] sessionEmployee] != nil) {
+     self.navigationItem.rightBarButtonItem.tintColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"profile_icon.png"]];
+     }
+     else{
+     
+     }*/
+    
+    // _rightBarButton.tintColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"profile_icon.png"]];
+    //NSLog(@"joaah %@", _rightBarButton.);
+    UIImage *buttonrightimage = [UIImage imageNamed:@"search_icon.png"];
+    UIBarButtonItem *vettehap = [[UIBarButtonItem alloc]init];
+     [vettehap setBackgroundImage:buttonrightimage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+     //[self.navigationItem setRightBarButtonItem:vettehap];
+     self.navigationItem.rightBarButtonItem = vettehap;
 }
 
 - (void)didReceiveMemoryWarning

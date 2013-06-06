@@ -2,7 +2,7 @@
 //  ProfileViewController.m
 //  iKnow
 //
-//  Created by Martijn Smit on 28-05-13.
+//  Created by Martijn Smit on 04-06-13.
 //  Copyright (c) 2013 WeMa IT. All rights reserved.
 //
 
@@ -35,8 +35,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)backtoSearch:(id)sender {
-    
-    [self performSegueWithIdentifier:@"BacktoStart" sender:self];
-}
 @end
