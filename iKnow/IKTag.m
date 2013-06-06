@@ -58,8 +58,22 @@
 
 + (NSArray*)searchEmployeesByTags:(NSArray *)tags
 {
+    // Compose the search string
+    NSMutableString *query = [[NSMutableString alloc] init];
+    for (IKTag *tag in tags) {
+        // Escape the tag name
+        NSString *escaptedTagName = (NSString*)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL, (__bridge CFStringRef)[tag name], NULL, CFSTR("!*'();:@&=+$,/?%#[]"), kCFStringEncodingUTF8));
+        
+        // Append the tag name
+        if ([query length] > 0) {
+            [query appendString:@","];
+        }
+        [query appendString:escaptedTagName];
+    }
+    NSLog(@"%@", query);
+    
     // Load the search results from the service
-    NSURL *url = [NSURL URLWithString:@"http://92.70.42.51:8000/IknowService.svc/search/java,xml,object%20oriented"];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://92.70.42.51:8000/IknowService.svc/search/%@", query]];
     NSData *data = [NSData dataWithContentsOfURL:url];
     
     // Process the response
@@ -68,6 +82,7 @@
                                                             options:kNilOptions
                                                               error:&error];
     NSArray *searchResults = [jsonRoot objectForKey:@"result"];
+    NSLog(@"%@", searchResults);
     
     // Compose the return value
     NSMutableArray *results = [[NSMutableArray alloc] init];
@@ -79,51 +94,3 @@
 }
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
