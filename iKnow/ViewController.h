@@ -11,8 +11,6 @@
 #import "Table2DataSource.h"
 #import "Table1Delegate.h"
 #import "Table2Delegate.h"
-#import "UIViewController+RNSwipeViewController.h"
-#import "RNSwipeViewController.h"
 
 @class LoginViewController;
 

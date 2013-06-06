@@ -49,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEu-fC-qs6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2478" y="-1537"/>
+            <point key="canvasLocation" x="3130" y="-1293"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tD6-Xh-kZS">
@@ -139,7 +139,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Syb-C3-xye" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="RTb-76-fxC"/>
             </objects>
-            <point key="canvasLocation" x="1729" y="-1194"/>
+            <point key="canvasLocation" x="3121" y="590"/>
         </scene>
         <!--View Controller - iKnow-->
         <scene sceneID="ND6-4u-8nd">
@@ -248,7 +248,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="iKnow" id="x3L-2l-8dV">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="login_icon.png" style="plain" id="bV8-6E-l4p">
+                        <barButtonItem key="rightBarButtonItem" image="login_icon.png" id="bV8-6E-l4p">
                             <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             <connections>
                                 <action selector="openLogin:" destination="RGv-we-xyW" id="P1j-5b-2Zb"/>
@@ -385,7 +385,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="T2V-6z-cBY">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" image="login_icon.png" style="plain" id="yui-TZ-CKk">
+                        <barButtonItem key="rightBarButtonItem" image="login_icon.png" id="yui-TZ-CKk">
                             <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </barButtonItem>
                     </navigationItem>
@@ -400,7 +400,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14T-OQ-Xrc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3333" y="-252"/>
+            <point key="canvasLocation" x="4121" y="-261"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5cX-pN-BVx">
@@ -418,7 +418,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0f-VN-X68" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="824" y="-252"/>
+            <point key="canvasLocation" x="1176" y="-261"/>
         </scene>
     </scenes>
     <resources>
@@ -452,6 +452,7 @@
         <class className="ProfileViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ProfileViewController.h"/>
             <relationships>
+                <relationship kind="action" name="goBack:"/>
                 <relationship kind="outlet" name="emailButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="emailLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
@@ -465,7 +466,6 @@
         <class className="SearchResultsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchResultsViewController.h"/>
             <relationships>
-                <relationship kind="action" name="goBack:"/>
                 <relationship kind="action" name="goProfile:"/>
             </relationships>
         </class>
@@ -485,6 +485,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Qnx-n6-bhy"/>
+        <segue reference="fIN-bv-rnr"/>
     </inferredMetricsTieBreakers>
 </document>

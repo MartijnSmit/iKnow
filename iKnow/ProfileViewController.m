@@ -30,7 +30,8 @@
     // Set all the labels
     IKEmployee *employee = [[AppDelegate sharedAppDelegate] sessionEmployee];
     _nameLabel.text = [NSString stringWithFormat:@"%@ %@", [employee firstName], [employee lastName]];
-    [_emailButton setLineBreakMode:UILineBreakModeWordWrap];
+    //[_emailButton setLineBreakMode:UILineBreakModeWordWrap];
+    [[_emailButton titleLabel] setLineBreakMode:NSLineBreakByWordWrapping];
     [_emailButton setTitle:[employee email] forState:UIControlStateNormal];
     _profileImage.image = [employee photo];
     NSLog(@"skills?? %@", [employee skills]);

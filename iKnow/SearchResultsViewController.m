@@ -35,12 +35,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)goBack:(id)sender {
-    
-    [self dismissModalViewControllerAnimated:YES];
-}
-
 - (IBAction)goProfile:(id)sender {
-            [self performSegueWithIdentifier:@"pushProfile" sender:self];
+    [self performSegueWithIdentifier:@"pushProfile" sender:self];
 }
 @end
